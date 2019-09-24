@@ -103,3 +103,5 @@ Current Issues
 
 need to disable thrust limiters and throttle in both engines and segments and activate engineAtl
 
+Need to add delay to parachutes
+
