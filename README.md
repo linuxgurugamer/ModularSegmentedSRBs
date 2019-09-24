@@ -38,10 +38,8 @@ SRB stack experiencing engine failure gets highlighted
 Models have been made by @SuicidalInsanity
 Consultative services provided by @OhioBob
 
-==============
-What to do when different sizes are stacked together?
-
-
+Misc Notes
+==========
 
 See: https://en.wikipedia.org/wiki/Space_Shuttle_Solid_Rocket_Booster
 	Internal configuration of fuel
