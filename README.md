@@ -21,11 +21,10 @@ Everyone watched amazed as Gene's eys crisscrossed a few times, then slowly focu
 
 Features
 
-SRB segments, 2, 4 and 8 meters long.  One part using PartVariants
-3 different engine styles
-Nosecones with built in parachutes and sepratrons
-Visual alarm in editor if SRB stack is too tall
-Outsized SRB stack gets highlighted
+SRB segments, 2, 4 and 8 meters long.  One part for each diameter using PartVariants
+3 different engine styles, two parts for each engine, PartVariants used to scale engine to different sizes
+Nosecones with built in parachutes and sepratrons, two parts, PartVariants used to scale engine to different sizes
+Visual alarm in editor if SRB stack is too tall, outsized SRB stack gets highlighted
 
 Abort mode, nosecones separate from stack, causing thrust be cancelled out by gases spewing from open stack
 Failure modes if SRBs are made too long
@@ -99,7 +98,7 @@ high performance electric propellant (HIPEP)  modern breed of electric solid pro
 
 
 Current Issues
-
+==============
 
 
 need to disable thrust limiters and throttle in both engines and segments and activate engineAtl
