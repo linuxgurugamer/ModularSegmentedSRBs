@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularSegmentedSRBs", "ModularSegmentedSRBs\ModularSegmentedSRBs.csproj", "{336CED87-B05B-48AB-9F32-7D7E9EB067AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8449DED-FA94-47BB-B9DB-7875144D0134}"
+	ProjectSection(SolutionItems) = preProject
+		Changelog.txt = Changelog.txt
+		deploy.bat = deploy.bat
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parts", "Parts", "{76C96921-5541-44ED-B917-781D3D212379}"
+	ProjectSection(SolutionItems) = preProject
+		GameData\ModularSegmentedSRBs\NoTweakScale.cfg = GameData\ModularSegmentedSRBs\NoTweakScale.cfg
+		GameData\ModularSegmentedSRBs\SolidFuel2.cfg = GameData\ModularSegmentedSRBs\SolidFuel2.cfg
+		GameData\ModularSegmentedSRBs\SpaceTuxIndustries.cfg = GameData\ModularSegmentedSRBs\SpaceTuxIndustries.cfg
+		GameData\ModularSegmentedSRBs\TechTree.cfg = GameData\ModularSegmentedSRBs\TechTree.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModularSRB", "ModularSRB", "{5FFFA1E7-BB52-4667-9C31-BB32C86AF566}"
+	ProjectSection(SolutionItems) = preProject
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\0.625dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\0.625dSegment.248h.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.25dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.25dSegment.248h.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.875dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.875dSegment.248h.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\2.5dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\2.5dSegment.248h.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor2m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor2m123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor2m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor2m123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone1m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone1m123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor2m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor2m123.cfg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{336CED87-B05B-48AB-9F32-7D7E9EB067AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336CED87-B05B-48AB-9F32-7D7E9EB067AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336CED87-B05B-48AB-9F32-7D7E9EB067AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336CED87-B05B-48AB-9F32-7D7E9EB067AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FFFA1E7-BB52-4667-9C31-BB32C86AF566} = {76C96921-5541-44ED-B917-781D3D212379}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F08BD10D-AF4B-4E7C-B274-96B6CCC1C8C4}
+	EndGlobalSection
+EndGlobal
