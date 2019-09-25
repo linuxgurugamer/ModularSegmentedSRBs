@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="aaa_Toolbar">
-      <HintPath>R:\KSP_1.7.3_dev\GameData\000_Toolbar\Plugins\aaa_Toolbar.dll</HintPath>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>R:\KSP_1.7.3_dev\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
