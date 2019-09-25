@@ -27,7 +27,7 @@ set GAMEDIR=ModularSegmentedSRBs
 set GAMEDATA="GameData\"
 set VERSIONFILE=%GAMEDIR%.version
 set LICENSE=LICENSE.md
-set README=README.md
+set README=README.md 
 
 set RELEASEDIR=d:\Users\jbb\release
 set ZIP="c:\Program Files\7-zip\7z.exe"
