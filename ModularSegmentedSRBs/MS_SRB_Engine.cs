@@ -92,13 +92,17 @@ namespace ModularSegmentedSRBs
 
         internal void ChangeUsage(float changeMult) //, float thrustVariability = 0)
         {
+            ChangeUsage(changeMult, ref maxThrust, ref atmosphereCurve);
+        }
+
+        internal void ChangeUsage(float changeMult, ref float maxThrust, ref FloatCurve atmosphereCurve) //, float thrustVariability = 0)
+        {
             atmosphereCurve = origAtmosphereCurve;
             maxThrust = origMaxThrust;
 
             maxThrust = ChangeThrust(changeMult);
             atmosphereCurve = ChangeFloatCurve(changeMult);
-                    }
-
+        }
         internal void SetEngineHealth(float changeMult)
         {
             engineHealth = changeMult;
@@ -313,7 +317,7 @@ namespace ModularSegmentedSRBs
         float fEngRunTime = 0f;
 
         float engineHealth = 1f;
-        
+
 
         float oldEngineHealth = 1f;
         bool sickEngine = false;
@@ -375,7 +379,7 @@ namespace ModularSegmentedSRBs
                         ChangeUsage(engineHealth, 0.5f * Mathf.Sin(fEngRunTime * Mathf.PI * 2 * ModSegSRBs.pressurePulseHertz));
                     } else
 #endif
-                    { 
+                    {
                         ChangeUsage(engineHealth);
                     }
                 }
@@ -405,7 +409,7 @@ namespace ModularSegmentedSRBs
                 }
 
                 totalFuelFlow *= Time.timeScale;
-                
+
                 if (secondPartResource != null)
                 {
                     double t = (secondPartResource.amount + totalFuelFlow + part.Resources[ModSegSRBs.BurnablePropellant].amount) / 2;

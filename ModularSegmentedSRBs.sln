@@ -7,9 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularSegmentedSRBs", "Mod
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8449DED-FA94-47BB-B9DB-7875144D0134}"
 	ProjectSection(SolutionItems) = preProject
+		buildRelease.bat = buildRelease.bat
 		Changelog.txt = Changelog.txt
 		deploy.bat = deploy.bat
+		jenkins.txt = jenkins.txt
 		LICENSE.md = LICENSE.md
+		ModularSegmentedSRBs.version = ModularSegmentedSRBs.version
 		README.md = README.md
 	EndProjectSection
 EndProject

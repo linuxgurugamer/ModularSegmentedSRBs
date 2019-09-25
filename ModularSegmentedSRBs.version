@@ -1,0 +1,20 @@
+{
+  "NAME": "ModularSegmentedSRBs",
+  "URL": "http://ksp.spacetux.net/avc/ModularSegmentedSRBs",
+  "DOWNLOAD": "http://spacedock.info/mod/613/ModularSegmentedSRBs",
+  "GITHUB": {
+    "USERNAME": "linuxgurugamer",
+    "REPOSITORY": "ModularSegmentedSRBs"
+  },
+  "VERSION": {
+    "MAJOR": 0,
+    "MINOR": 0,
+    "PATCH": 0,
+    "BUILD": 0
+  },
+  "KSP_VERSION_MIN": {
+    "MAJOR": 1,
+    "MINOR": 7,
+    "PATCH": 3
+  }
+}

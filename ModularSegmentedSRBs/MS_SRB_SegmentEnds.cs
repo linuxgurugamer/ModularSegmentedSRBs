@@ -116,6 +116,8 @@ namespace ModularSegmentedSRBs
                 this.maxThrust = baseEngine.maxThrust;
                 this.atmosphereCurve = baseEngine.atmosphereCurve;
 
+                baseEngine.ChangeUsage(0.1f, ref this.maxThrust, ref this.atmosphereCurve);
+
                 enabled = true;
                 activated = true;
                 part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
