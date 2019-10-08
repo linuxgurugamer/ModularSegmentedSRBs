@@ -37,9 +37,15 @@ namespace ModularSegmentedSRBs
         double totalMaxThrust = 0;
         double totalFuelMass = 0;
         double totalFuelFlow = 0f;
-        float segmentWidth = 1.25f;
-        double totalSolidFuel = 0;
+        //float segmentWidth = 1.25f;
+        // double totalSolidFuel = 0;
         float failureChance = 0;
+
+        [KSPField(isPersistant = true)]
+        public float segmentHeight = 1.25f;
+
+        [KSPField(isPersistant = true)]
+        public float segmentWidth = 1.25f;
 
         [KSPField]
         public float thrustModifier = 1;
@@ -53,10 +59,19 @@ namespace ModularSegmentedSRBs
         {
             triggerEngineFailure = true;
         }
+
         [KSPEvent(guiActive = true, guiActiveEditor = false, guiName = "Trigger engine failure")]
         public void TriggerEngineFailureEvent()
         {
             triggerEngineFailure = true;
+        }
+
+        int updateSegmentsIn = -1;
+
+        public void ScheduleSegmentUpdate(string s, int i = 3)
+        {
+            updateSegmentsIn = i;
+            Log.Info("ScheduleSegmentUpdate, from: " + s);
         }
 
         // Following are for run-time efficiency
@@ -69,7 +84,24 @@ namespace ModularSegmentedSRBs
         FloatCurve origAtmosphereCurve;
         float origMaxThrust;
 
-        FloatCurve ChangeFloatCurve(float changeMult)
+
+        float fEngRunTime = 0f;
+
+        float engineHealth = 1f;
+
+
+        float oldEngineHealth = 1f;
+        bool sickEngine = false;
+        internal bool brokenSRB = false;
+        float explode = -1;
+
+        float percentLeft = 1;
+
+        EditorMarker_CoM CoM, oCoM;
+        int comCheckCntr = 0;
+        int burnablePropIndx = 0;
+
+        static FloatCurve ChangeFloatCurve(float changeMult, FloatCurve atmosphereCurve)
         {
             FloatCurve newAtmoCurve = new FloatCurve();
             // First save to a config node.
@@ -85,24 +117,24 @@ namespace ModularSegmentedSRBs
             return newAtmoCurve;
         }
 
-        float ChangeThrust(float changeMult)
+        static float ChangeThrust(float changeMult, float maxThrust)
         {
             return maxThrust * changeMult;
         }
 
         internal void ChangeUsage(float changeMult) //, float thrustVariability = 0)
         {
-            ChangeUsage(changeMult, ref maxThrust, ref atmosphereCurve);
-        }
-
-        internal void ChangeUsage(float changeMult, ref float maxThrust, ref FloatCurve atmosphereCurve) //, float thrustVariability = 0)
-        {
             atmosphereCurve = origAtmosphereCurve;
             maxThrust = origMaxThrust;
-
-            maxThrust = ChangeThrust(changeMult);
-            atmosphereCurve = ChangeFloatCurve(changeMult);
+            ChangeUsage(changeMult, ref maxThrust, ref atmosphereCurve);            
         }
+
+        internal static void ChangeUsage(float changeMult, ref float maxThrust, ref FloatCurve atmosphereCurve) //, float thrustVariability = 0)
+        {
+            maxThrust = ChangeThrust(changeMult, maxThrust);
+            atmosphereCurve = ChangeFloatCurve(changeMult, atmosphereCurve);
+        }
+
         internal void SetEngineHealth(float changeMult)
         {
             engineHealth = changeMult;
@@ -110,12 +142,16 @@ namespace ModularSegmentedSRBs
 
         private void Start()
         {
-            if (!HighLogic.CurrentGame.Parameters.CustomParams<MSSRB_1>().devMode)
-            {
-                Events["TriggerEngineFailureEvent"].active = false;
-                Actions["TriggerEngineFailureAction"].active = false;
-            }
+            Events["TriggerEngineFailureEvent"].active = HighLogic.CurrentGame.Parameters.CustomParams<MSSRB_1>().devMode;
+            Actions["TriggerEngineFailureAction"].active = HighLogic.CurrentGame.Parameters.CustomParams<MSSRB_1>().devMode;
 
+            foreach (var e in Events)
+                Log.Info("Event: " + e.name + ", guiName = " + e.GUIName);
+            foreach (var a in Actions)
+                Log.Info("Action: " + a.name + ", guiName: " + a.guiName);
+
+            Actions["ToggleThrottle"].active =
+                Actions["ToggleThrottle"].activeEditor = false;
             origAtmosphereCurve = atmosphereCurve;
 
             PartResourceDefinition prd = PartResourceLibrary.Instance.GetDefinition(ModSegSRBs.Propellant);
@@ -129,20 +165,32 @@ namespace ModularSegmentedSRBs
             if (highlightID >= 0)
                 UpdateHighlightColors();
 
-            if (HighLogic.LoadedSceneIsEditor)
+            foreach (var p in propellants)
             {
-                GameEvents.onEditorShipModified.Add(onEditorShipModified);
-
-                UpdateSegments();
-            }
-            else
-            {
-                if (HighLogic.LoadedSceneIsFlight)
+                if (p.name == ModSegSRBs.BurnablePropellant)
                 {
+                    break;
+                }
+                burnablePropIndx++;
+            }
+            ModSegSRBs.GetExtraInfo(part.baseVariant, ref segmentHeight, ref segmentWidth);
 
+            switch (HighLogic.LoadedScene)
+            {
+                case GameScenes.EDITOR:
+                    //GameEvents.onEditorShipModified.Add(onEditorShipModified);
+
+                    //EventData<ConstructionEventType, Part> onEditorPartEvent;
+                    GameEvents.onEditorPartPicked.Add(onEditorPartPicked);
+                    GameEvents.onEditorPartPlaced.Add(onEditorPartPlaced);
+                    GameEvents.onEditorPartDeleted.Add(onEditorPartDeleted);
+                    GameEvents.onVariantApplied.Add(onEditorVariantApplied);
+                    ScheduleSegmentUpdate("Start");
+                    break;
+
+                case GameScenes.FLIGHT:
                     failureChance = HighLogic.CurrentGame.Parameters.CustomParams<MSSRB_1>().failureChance;
-
-                    if (this.vessel.situation == Vessel.Situations.PRELAUNCH)
+                    if (this.vessel.situation <= Vessel.Situations.PRELAUNCH)
                     {
                         UpdateSegments();
                         foreach (var s in segments)
@@ -152,28 +200,52 @@ namespace ModularSegmentedSRBs
 
                             PartResourceList prl = s.part.Resources;
                             if (prl.Contains(ModSegSRBs.Propellant))
+                            {
+                                //Log.Info("Segment: " + s.part.partInfo.title + " contains Propellant");
                                 prl[ModSegSRBs.Propellant].amount = moduleFuelSegment.MaxSolidFuel();
+                            }
                             if (prl.Contains(ModSegSRBs.BurnablePropellant))
+                            {
                                 prl[ModSegSRBs.BurnablePropellant].amount = 0;
+                                //prl[ModSegSRBs.BurnablePropellant].amount = moduleFuelSegment.MaxSolidFuel();
+
+                                //Log.Info("Segment: " + s.part.partInfo.title + " contains BurnablePropellant");
+                            }
                         }
                     }
-                }
-            }
+                    break;
 
+            } // switch
         }
+
+
         void OnDestroy()
         {
             if (HighLogic.LoadedSceneIsEditor)
             {
+                GameEvents.onEditorPartPicked.Remove(onEditorPartPicked);
+                GameEvents.onEditorPartPlaced.Remove(onEditorPartPlaced);
+                GameEvents.onEditorPartDeleted.Remove(onEditorPartDeleted);
                 GameEvents.onEditorShipModified.Remove(onEditorShipModified);
+                GameEvents.onVariantApplied.Remove(onEditorVariantApplied);
             }
         }
 
-        void onEditorShipModified(ShipConstruct construct)
+        private void onEditorPartPlaced(Part p) { ScheduleSegmentUpdate("onEditorPartPlaced"); }
+
+        private void onEditorPartPicked(Part p) { ScheduleSegmentUpdate("onEditorPartPlaced"); }
+
+        private void onEditorPartDeleted(Part p) { ScheduleSegmentUpdate("onEditorPartDeleted"); }
+
+        private void onEditorVariantApplied(Part part, PartVariant variant)
         {
-            UpdateSegments();
+            if (part != base.part)
+                return;
+            ModSegSRBs.GetExtraInfo(variant, ref segmentHeight, ref segmentWidth);
+            ScheduleSegmentUpdate("onEditorVariantApplied");
         }
 
+        void onEditorShipModified(ShipConstruct construct) { ScheduleSegmentUpdate("onEditorShipModified"); }
 
         bool CheckPartResources(Part part)
         {
@@ -185,25 +257,36 @@ namespace ModularSegmentedSRBs
             PartModuleList pml = part.Modules;
             if (prl.Contains(ModSegSRBs.Propellant) && pml.Contains<MS_SRB_Fuel_Segment>())
             {
+                Log.Info("CheckPartResources, " + ModSegSRBs.Propellant + " found, " + " MS_SRB_Fuel_Segment found");
                 MS_SRB_Fuel_Segment moduleFuelSegment = pml["MS_SRB_Fuel_Segment"] as MS_SRB_Fuel_Segment;
 
                 segments.Add(new Segment(part, moduleFuelSegment.segmentHeight));
-                totalFuelMass += prl[ModSegSRBs.Propellant].maxAmount;
+                totalFuelMass += moduleFuelSegment.MaxSolidFuel();  // prl[ModSegSRBs.Propellant].maxAmount;
 
 
                 totalMaxThrust += moduleFuelSegment.GetSetMaxThrust;
                 totalSegmentHeight += moduleFuelSegment.segmentHeight;
                 invTotalSegmentHeight = 1 / totalSegmentHeight;
 
-                totalSolidFuel += moduleFuelSegment.MaxSolidFuel();
-                segmentWidth = Math.Max(segmentWidth, moduleFuelSegment.segmentWidth);
+                //totalSolidFuel += moduleFuelSegment.MaxSolidFuel();
+                //segmentWidth = Math.Max(segmentWidth, moduleFuelSegment.segmentWidth);
 
                 moduleFuelSegment.baseEngine = this;
-                if (coM == null && HighLogic.LoadedSceneIsEditor)
-                    prl[ModSegSRBs.Propellant].amount = 0;
-                else
-                    prl[ModSegSRBs.Propellant].amount = moduleFuelSegment.MaxSolidFuel();
 
+                if (CoM == null && HighLogic.LoadedSceneIsEditor)
+                {
+                    prl[ModSegSRBs.Propellant].amount = 0;
+                    prl[ModSegSRBs.BurnablePropellant].amount = 0; // moduleFuelSegment.MaxSolidFuel();
+                    Log.Info("(2) Propellant Setting part.amount = 0, BurnablePropellant maxAmount set to: " + prl[ModSegSRBs.BurnablePropellant].maxAmount);
+                }
+                else
+                {
+                    prl[ModSegSRBs.Propellant].amount = moduleFuelSegment.MaxSolidFuel();
+                    prl[ModSegSRBs.BurnablePropellant].amount = 0;
+                }
+                prl[ModSegSRBs.Propellant].maxAmount =
+                    prl[ModSegSRBs.BurnablePropellant].maxAmount = moduleFuelSegment.MaxSolidFuel();
+                Log.Info("totalMaxThrust: " + totalMaxThrust + ", totalFuelMass: " + totalFuelMass);
                 // Set the baseEngine in the segment ends here, do it in a loop
                 // because there can be either one or two ends
                 foreach (var p in pml)
@@ -216,17 +299,25 @@ namespace ModularSegmentedSRBs
                         mssrb.atmosphereCurve = this.atmosphereCurve;
                     }
                 }
+
                 return true;
 
             }
             else
+            {
+                Log.Info("CheckPartResources, no Propellant found");
                 return false;
+            }
         }
 
-        internal void UpdateSegments()
+        void UpdateSegments()
         {
             if (part == null)
+            {
+                Log.Info("UpdateSegments, part is null");
                 return;
+            }
+            Log.Info("UpdateSegments, updateSegmentsIn: " + updateSegmentsIn);
 
             // Get a list of all the attached fuel segments, following the nodes from the top node
             // of the engine to the bottom node of the attached segment, and then the top node of the segment, etc
@@ -234,16 +325,16 @@ namespace ModularSegmentedSRBs
 
             totalMaxThrust = 0;
             totalSegmentHeight = 0;
-            segmentWidth = 0;
+            //segmentWidth = 0;
             totalFuelMass = 0;
-            totalSolidFuel = 0;
+            //totalSolidFuel = 0;
             segments.Clear();
             Part curPart = this.part;
             Part nextPart;
 
             AttachNode topAttachNode = this.part.FindAttachNode("top");
-            if (topAttachNode == null)
-                return;
+            //if (topAttachNode == null)
+            //    return;
             /* bool motorHasFuel = */
             CheckPartResources(this.part);
 
@@ -255,10 +346,12 @@ namespace ModularSegmentedSRBs
                 AttachNode nextPartBottomNode = nextPart.FindAttachNode("bottom");
                 if (nextPartBottomNode == null || nextPartBottomNode.attachedPart != curPart)
                 {
+                    Log.Info("nextPartBottomNode == null");
                     break;
                 }
                 if (!CheckPartResources(nextPart))
                 {
+                    Log.Info("CheckPartResources returns false");
                     break;
                 }
                 curPart = nextPart;
@@ -267,22 +360,35 @@ namespace ModularSegmentedSRBs
                     break;
             }
 
-            foreach (var s in segments)
+
+            //foreach (var s in segments)
+            for (int i = 0; i < segments.Count; i++)
             {
+                Segment s = segments[i];
                 PartResourceList prl = s.part.Resources;
                 s.ratio = prl[ModSegSRBs.Propellant].maxAmount / totalFuelMass;
+                Log.Info("UpdateSegments, segment[" + i + "]: " + s.part.partInfo.title + ", resources: " + prl[ModSegSRBs.Propellant].maxAmount);
             }
+            Log.Info("UpdateSegments, totalFuelMass: " + totalFuelMass);
 
             maxThrust = (float)totalMaxThrust * thrustModifier;
             maxFuelFlow = (float) /*Planetarium.fetch.fixedDeltaTime* */(maxThrust /*  * mixtureDensityRecip  */) / (atmosphereCurve.Evaluate(0f) * g);
             origMaxThrust = maxThrust;
 
             PartResource pr = part.Resources[ModSegSRBs.BurnablePropellant];
-            pr.maxAmount = maxFuelFlow;
-            if (coM != null || HighLogic.LoadedSceneIsFlight)
+
+            if (CoM != null || HighLogic.LoadedSceneIsFlight)
+            {
+                Log.Info("(1) BurnablePropellant Setting part.amount = 0");
                 pr.amount = 0;
+                pr.maxAmount = maxFuelFlow;
+            }
             else
-                pr.amount = totalSolidFuel;
+            {
+                Log.Info("(1) BurnablePropellant Setting part.amount = " + totalFuelMass);
+                pr.amount = totalFuelMass;
+                pr.maxAmount = totalFuelMass;
+            }
 
             if (segmentWidth > 0)
             {
@@ -312,22 +418,38 @@ namespace ModularSegmentedSRBs
 
             totalFuelFlow = maxFuelFlow / Planetarium.fetch.fixedDeltaTime;
 
+
+            GameEvents.onChangeEngineDVIncludeState.Fire(this);
         }
-
-        float fEngRunTime = 0f;
-
-        float engineHealth = 1f;
-
-
-        float oldEngineHealth = 1f;
-        bool sickEngine = false;
-        float explode = -1;
-
-        float percentLeft = 1;
-
-        internal void UpdateSegmentsInFlight()
+#if false
+        internal void SetBrokenSRB(float percentage, double abortFuelAmt)
         {
-            if (this.EngineIgnited)
+            Log.Info("SetBrokenSRB, abortFuelAmt: " + abortFuelAmt);
+            ChangeUsage(percentage, ref maxThrust, ref atmosphereCurve);
+            brokenSRB = true;
+
+            part.Resources[ModSegSRBs.AbortedPropellant].maxAmount =
+                                  part.Resources[ModSegSRBs.AbortedPropellant].amount = abortFuelAmt;
+            part.Resources[ModSegSRBs.Propellant].amount = part.Resources[ModSegSRBs.BurnablePropellant].amount = 0;
+            part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
+                                  part.Resources[ModSegSRBs.BurnablePropellant].maxAmount = 0;
+
+            List<MS_SRB_SegmentEnds> smfLst = part.Modules.GetModules<MS_SRB_SegmentEnds>();
+            foreach (var se in smfLst)
+            {
+                // if (se.attachNode == null || se.attachNode == "")
+                {
+                    Log.Info("SetBrokenSRB, activating");
+                    se.ActivateEngine2(maxThrust, maxFuelFlow);
+                }
+
+            }
+        }
+#endif
+
+        void UpdateSegmentsInFlight()
+        {
+            if (this.EngineIgnited && !brokenSRB)
             {
                 if (failureChance > 0)
                 {
@@ -338,7 +460,6 @@ namespace ModularSegmentedSRBs
 
                         HighlightStack();
                         AudibleAlertCore.fetch.ActivateAlarm(5);
-
 
                         if (UnityEngine.Random.Range(0, 1f) <= HighLogic.CurrentGame.Parameters.CustomParams<MSSRB_1>().explosionChance)
                         {
@@ -383,7 +504,8 @@ namespace ModularSegmentedSRBs
                         ChangeUsage(engineHealth);
                     }
                 }
-                var maxFuelFlow = getMaxFuelFlow(propellants[0]) * Time.fixedDeltaTime - part.Resources[ModSegSRBs.BurnablePropellant].amount + 0.05f;
+
+                var maxFuelFlow = getMaxFuelFlow(propellants[burnablePropIndx]) * Time.fixedDeltaTime - part.Resources[ModSegSRBs.BurnablePropellant].amount + 0.05f;
                 for (int i = 0; i < segments.Count; i++)
                 {
                     Segment segment = segments[i];
@@ -400,12 +522,14 @@ namespace ModularSegmentedSRBs
                     totalFuelFlow += availableResource;
                     totalCurrentFuel += prl[ModSegSRBs.Propellant].amount;
                     totalMaxFuel += prl[ModSegSRBs.Propellant].maxAmount;
+
                     if (((MS_SRB_SegmentEnds)segment.part.Modules["MS_SRB_SegmentEnds"]).EngineIgnited)
                     {
                         secondPartResource = segment.part.Resources[ModSegSRBs.BurnablePropellant];
                     }
                     else
                         secondPartResource = null;
+
                 }
 
                 totalFuelFlow *= Time.timeScale;
@@ -430,32 +554,44 @@ namespace ModularSegmentedSRBs
                 // This fools the game into showing the correct amount in the staging toolbar
 
                 part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
-                    part.Resources[ModSegSRBs.BurnablePropellant].amount * totalSolidFuel / (part.Resources[ModSegSRBs.BurnablePropellant].amount + totalCurrentFuel);
+                    part.Resources[ModSegSRBs.BurnablePropellant].amount * totalFuelMass / (part.Resources[ModSegSRBs.BurnablePropellant].amount + totalCurrentFuel);
                 percentLeft = (float)(totalCurrentFuel / totalMaxFuel);
             }
         }
 
-        EditorMarker_CoM coM, oCoM;
-        int comCheckCntr = 0;
-        new void FixedUpdate()
+        void UpdateSegmentsInEditor()
         {
-            if (HighLogic.LoadedSceneIsFlight)
-                UpdateSegmentsInFlight();
-            else
-            {
-                comCheckCntr++;
-                if (comCheckCntr > 15)
-                {
-                    comCheckCntr = 0;
 
-                    oCoM = coM;
-                    coM = (EditorMarker_CoM)FindObjectOfType(typeof(EditorMarker_CoM));
-                    if (coM != oCoM)
-                    {
-                        UpdateSegments();
-                    }
+            comCheckCntr++;
+            if (comCheckCntr > 15)
+            {
+                comCheckCntr = 0;
+
+                oCoM = CoM;
+                CoM = (EditorMarker_CoM)FindObjectOfType(typeof(EditorMarker_CoM));
+                if (CoM != oCoM)
+                {
+                    UpdateSegments();
+                    updateSegmentsIn = -1;
                 }
             }
+            if (updateSegmentsIn-- == 0)
+                UpdateSegments();
+        }
+
+
+        new void FixedUpdate()
+        {
+            switch (HighLogic.LoadedScene)
+            {
+                case GameScenes.FLIGHT:
+                    UpdateSegmentsInFlight();
+                    break;
+                case GameScenes.EDITOR:
+                    UpdateSegmentsInEditor();
+                    break;
+            }
+
             base.FixedUpdate();
         }
 
@@ -490,7 +626,7 @@ namespace ModularSegmentedSRBs
             infoThrust = str + Localizer.Format("#autoLOC_220745", obj); // isp
             infoThrust += Localizer.Format("#autoLOC_220748"); // propellants
 
-            Propellant propellant = propellants[0];
+            Propellant propellant = propellants[burnablePropIndx];
             string text = KSPUtil.PrintModuleName(propellant.displayName);
             string str2 = infoThrust;
 
@@ -530,5 +666,6 @@ namespace ModularSegmentedSRBs
                         if (s != null)
                             phl.DisablePartHighlighting(highlightID, s.part);
         }
+
     }
 }

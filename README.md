@@ -23,7 +23,9 @@ Features
 
 * SRB segments, 2, 4 and 8 meters long.  One part for each diameter using PartVariants
 * 3 different engine styles, two parts for each engine, PartVariants used to scale engine to different sizes
-* Nosecones with built in parachutes and sepratrons, two parts, PartVariants used to scale engine to different sizes
+* Nosecones with built in parachutes and sepratrons, PartVariants used to scale engine to different sizes
+	* Parachutes have built-in, adjustable delay
+* Endcaps for the top of SRBs, needed if not using the Nosecones
 * Visual alarm in editor if SRB stack is too tall, outsized SRB stack gets highlighted
 * Abort mode, nosecones separate from stack, causing thrust be cancelled out by gases spewing from open stack
 * Failure modes if SRBs are made too long
@@ -35,9 +37,13 @@ Features
 
 Parts
 
-There are two types of parts, each uses the PartVariant in a different manner.
+There are 4 types of parts, one of each for the sizes 0.625m, 1.25m, 1.875m and 2.5m diameter
 
-Segments (aka tanks).  There is one part for each of the 4 diameters available.  Each part can be either 1 segment long, 2 segments long or 4 segments long.  The length of a segment depends on the diameter of the part:
+Nosecones w/integrated endcaps.  These nosecones have integrated sepratrons and paracutes.  Additionally each nosecone has an optional integrated fuel segment as one of the variants.
+
+Endcaps.  These are needed to cap the top of the SRB segments when not using the nosecone, otherwise the exhaust will not be contained and vent upwards as well as downwards.
+
+Segments (aka tanks).  There is one part for each of the 4 diameters available.  Each part can be either 1 segment long, 2 segments long or 4 segments long using the PartVariants to move between then.  The length of a segment depends on the diameter of the part:
 
 	Diameter	Segment Length
 
@@ -46,17 +52,17 @@ Segments (aka tanks).  There is one part for each of the 4 diameters available. 
 	1.875m			3m
 	2.5m			4m
 
-End parts, including NoseCone and Motors.  There is one part for each, the PartVariants for these scale the part to the different diameters available.
+Motors.  There are three different motors in each size, ranging from the least capable to the most capable.  As with the nosecones, each motor has an optional fuel segment, available using the PartVariants
+	
+	Minuteman 
+	Atlas
+	STS
 
-A word of explanation.  The parts are set up this way to minimize the number of parts in the mod.  There are currently 12 parts in the mod.  If I were to have a nosecone for each size, that would add an additional 6 parts for no real benefit.  Same goes for the motors
-
-Fuel
-
-Currently there is only one type of solid fuel available.  In a future release, there may be an additional one or two fuel types added
+Fuel.  Currently there is only one type of solid fuel available.  In a future release, there may be an additional one or two fuel types added
 
 Usage
 
-Segments can be stacked on each other, and the part variant selected even while stacked together.  Be sure to put a motor on the bottom, and something on top, either a nosecone or something else
+Segments can be stacked on each other, and the part variant selected even while stacked together.  Be sure to put a motor on the bottom, and something on top, either a nosecone, or if putting other parts on top, an endcap
 
 Thrust vs Duration
 
@@ -67,7 +73,7 @@ Additionally, fatter SRBs will end up with a larger exposed surface on the insid
 
 Important Information about mass and dV
 
-Solid fuel by definition does not flow.  In order to make this work properly, I've had to create two resources.  They are both hidden, but knowing what they are is necessary to understand some odd behaviour.
+Solid fuel by definition does not flow.  In order to make this work properly, I've had to create three resources.  They are all hidden, but knowing what they are is necessary to understand some odd behaviour.
 In order to allow vessels to be designed correctly, the fuel has to be in the tank segment .  In order to calcualate the dV correctly, the fuel has to be in the motor.
 So what happens is that in the editor, all fuel is normally put into the motor.  When the CoM marker is shown, the fuel is moved into the tank segments,
 
@@ -77,8 +83,8 @@ In the flight scene, the fuel is in the tank for proper balance.  Because of thi
 Models have been made by @SuicidalInsanity
 Consultative services provided by @OhioBob
 
-Misc Notes
-==========
+Misc Notes (will be removed in final release)
+=============================================
 
 See: https://en.wikipedia.org/wiki/Space_Shuttle_Solid_Rocket_Booster
 	Internal configuration of fuel
@@ -136,9 +142,13 @@ Electric solid propellants: Electric solid propellants (ESPs) are a family of hi
 high performance electric propellant (HIPEP)  modern breed of electric solid propellants was developed with higher conductivity and specific impulse.
 
 
+Grain
+Future addition will be adding the ability to specify a grain pattern for the srb.
+URLs for reference:  
+	https://www.nakka-rocketry.net/th_grain.html
+	https://space.stackexchange.com/questions/4153/could-3d-printing-be-used-to-achieve-perfect-grain-geometry-of-solid-and-hybrid
+
 
 Current Issues
 ==============
 
-
-need to disable thrust limiters and throttle in both engines and segments and activate engineAtl

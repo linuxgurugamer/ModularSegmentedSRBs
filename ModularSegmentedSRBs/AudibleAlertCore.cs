@@ -28,20 +28,23 @@ namespace ModularSegmentedSRBs
             GameEvents.onGameUnpause.Add(OnUnpause);
         }
 
+        void StopSound()
+        {
+            if (soundplayer.SoundPlaying())
+                soundplayer.StopSound();
+        }
         void OnPause()
         {
             Paused = true;
             if (soundplayer == null)
                 return;
-            if (soundplayer.SoundPlaying())
-            {
-                soundplayer.StopSound();
-            }
+            StopSound();
+
         }
 
         void OnDestroy()
         {
-            OnPause();
+            StopSound();
             GameEvents.onGamePause.Remove(OnPause);
             GameEvents.onGameUnpause.Remove(OnUnpause);
         }

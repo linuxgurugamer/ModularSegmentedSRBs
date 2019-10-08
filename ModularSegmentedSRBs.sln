@@ -17,27 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parts", "Parts", "{76C96921-5541-44ED-B917-781D3D212379}"
-	ProjectSection(SolutionItems) = preProject
-		GameData\ModularSegmentedSRBs\NoTweakScale.cfg = GameData\ModularSegmentedSRBs\NoTweakScale.cfg
-		GameData\ModularSegmentedSRBs\SolidFuel2.cfg = GameData\ModularSegmentedSRBs\SolidFuel2.cfg
-		GameData\ModularSegmentedSRBs\SpaceTuxIndustries.cfg = GameData\ModularSegmentedSRBs\SpaceTuxIndustries.cfg
-		GameData\ModularSegmentedSRBs\TechTree.cfg = GameData\ModularSegmentedSRBs\TechTree.cfg
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModularSRB", "ModularSRB", "{5FFFA1E7-BB52-4667-9C31-BB32C86AF566}"
 	ProjectSection(SolutionItems) = preProject
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\0.625dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\0.625dSegment.248h.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.25dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.25dSegment.248h.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.875dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\1.875dSegment.248h.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\2.5dSegment.248h.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\2.5dSegment.248h.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor123.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor2m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\AtlasMotor2m123.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor123.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor2m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\MinutemanMotor2m123.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone123.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone1m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\Nosecone1m123.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor123.cfg
-		GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor2m123.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor2m123.cfg
+		GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor2m.cfg = GameData\ModularSegmentedSRBs\Parts\ModularSRB\STSMotor2m.cfg
 	EndProjectSection
 EndProject
 Global

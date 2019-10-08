@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using KSP_Log;
 
 namespace ModularSegmentedSRBs
@@ -15,14 +16,19 @@ namespace ModularSegmentedSRBs
         static AvailablePart techPart;
         static bool techPartResearched = false;
 
+        [UI_FloatRange(stepIncrement = 10f, maxValue = 300f, minValue = 0f)]
+        [KSPField(isPersistant = true, guiActive = true, guiActiveEditor = true, guiName = "Deployment Delay (secs)")]
+        public float deploymentDelay = 20f;
+
+
         public override void OnStart(StartState state)
         {
             Start();
             base.OnStart(state);
         }
+
         void Start()
         {
-
             if (PartLoader.DoesPartExist(TechName))
             {
                 techPart = PartLoader.getPartInfoByName(TechName);
@@ -42,6 +48,8 @@ namespace ModularSegmentedSRBs
                     Log.Info("researched");
                 }
             }
+            else
+                Log.Error("Start, TechName NOT found: " + TechName);
         }
         public override void OnLoad(ConfigNode node)
         {
@@ -60,15 +68,27 @@ namespace ModularSegmentedSRBs
             return ResearchAndDevelopment.PartTechAvailable(p) && ResearchAndDevelopment.PartModelPurchased(p);
         }
 
+        float deploymentDelayElapsedTime = 0;
+        public new void FixedUpdate()
+        {
+            if (deploymentState > 0)
+            {
+                deploymentDelayElapsedTime = deploymentDelayElapsedTime + Time.fixedDeltaTime;
+                if (deploymentDelayElapsedTime < deploymentDelay)
+                    return;
+
+            }
+            base.FixedUpdate();
+        }
 
         public override string GetInfo()
         {
-            string st =  base.GetInfo();
+            string st = base.GetInfo();
             return st;
         }
         public override string GetModuleDisplayName()
         {
-           string st = base.GetModuleDisplayName();
+            string st = base.GetModuleDisplayName();
             return st;
         }
 

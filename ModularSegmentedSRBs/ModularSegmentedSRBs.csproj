@@ -72,6 +72,8 @@
     <Compile Include="AudibleAlertCore.cs" />
     <Compile Include="InstallChecker.cs" />
     <Compile Include="ModularSegmentedSRBs.cs" />
+    <Compile Include="MS_SRB_Endcap.cs" />
+    <Compile Include="TechModules\MSSRB_AngledNozzle.cs" />
     <Compile Include="TechModules\MSSRB_FlightControl.cs" />
     <Compile Include="TechModules\MSSRB_ModuleParachute.cs" />
     <Compile Include="TechModules\MSSRB_ModulePrecisionPropulsion.cs" />

@@ -1,16 +1,23 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using UnityEngine;
 using KSP_Log;
 
 namespace ModularSegmentedSRBs.TechModules
 {
-
-    public class MSSRB_FlightControl : ModuleCommand
+    public class MSSRB_AngledNozzle: ModuleAnimateGeneric
     {
-        const string TechName = "MSSRB.ModuleFlightControl";
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_FlightControl");
+        const string TechNameTemplate = "MSSRB.<TAG>AngledNozzle";
+        string TechName = "";
+        Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModuleParachute");
 
         static AvailablePart techPart;
         static bool techPartResearched = false;
+
+        [KSPField]
+        public string baseEngineName;
 
         public override void OnStart(StartState state)
         {
@@ -18,23 +25,23 @@ namespace ModularSegmentedSRBs.TechModules
             base.OnStart(state);
         }
 
-        public override void Start()
+        void Start()
         {
+            TechName =  TechNameTemplate.Replace("<TAG>", animationName.Replace("Offset",""));
+            actionGUIName = "Enable/disable angled nozzle";
+            endEventGUIName = "Enable angled nozzle";
+            startEventGUIName = "Disable angled nozzle";
+
             if (PartLoader.DoesPartExist(TechName))
             {
                 techPart = PartLoader.getPartInfoByName(TechName);
-                if (techPart == null)
-                {
-                    Log.Error("Start, TechName NOT found: " + TechName);
-                    base.OnDestroy();
-                    Destroy(this);
-                }
                 techPartResearched = PartResearched(techPart);
                 if (!techPartResearched)
                 {
                     if (HighLogic.LoadedScene != GameScenes.LOADING)
                     {
-                        base.OnDestroy();
+                        Log.Info(TechName + ", not researched yet");
+                        
                         Destroy(this);
                     }
                 }
@@ -43,31 +50,21 @@ namespace ModularSegmentedSRBs.TechModules
                     Log.Info("researched");
                 }
             }
-            base.Start();
         }
-
         public override void OnLoad(ConfigNode node)
         {
             Start();
-            if ((techPartResearched || HighLogic.LoadedScene == GameScenes.LOADING) && node != null)
+            if (techPartResearched || HighLogic.LoadedScene == GameScenes.LOADING)
                 base.OnLoad(node);
         }
-
-#if false
         public override void OnAwake()
         {
             Start();
             if (techPartResearched || HighLogic.LoadedScene == GameScenes.LOADING)
                 base.OnAwake();
         }
-#endif
-
         public bool PartResearched(AvailablePart p)
         {
-            if (p == null)
-            {
-                Log.Error("PartResearched, AvailablePart is null");
-            }
             return ResearchAndDevelopment.PartTechAvailable(p) && ResearchAndDevelopment.PartModelPurchased(p);
         }
 
@@ -77,16 +74,13 @@ namespace ModularSegmentedSRBs.TechModules
             string st = base.GetInfo();
             return st;
         }
-
         public override string GetModuleDisplayName()
         {
-
             string st = base.GetModuleDisplayName();
             return st;
         }
 
         public override bool IsStageable() { return techPartResearched; }
 
-        protected override void OnNetworkInitialised() { }
     }
 }

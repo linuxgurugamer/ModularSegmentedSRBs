@@ -6,7 +6,7 @@ using KSP_Log;
 
 namespace ModularSegmentedSRBs
 {
-    class MSSRB_ModulePrecisionPropulsion : ModuleEngines
+    class MSSRB_ModulePrecisionPropulsion : ModuleEnginesFX
     {
         const string TechName = "MSSRB.PrecisionPropulsion";
         Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModulePrecisionPropulsion");
@@ -24,7 +24,7 @@ namespace ModularSegmentedSRBs
         {   
             if (PartLoader.DoesPartExist(TechName))
             {
-                Log.Info("Part exists: " + TechName);
+                Log.Info("Start, Part exists: " + TechName);
                 techPart = PartLoader.getPartInfoByName(TechName);
                 techPartResearched = PartResearched(techPart);
                 if (!techPartResearched)
@@ -44,6 +44,9 @@ namespace ModularSegmentedSRBs
                         Destroy(this);
                     }
                 }
+            } else
+            {
+                Log.Error("TechName NOT found: " + TechName);
             }
         }
 
