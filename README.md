@@ -148,7 +148,18 @@ URLs for reference:
 	https://www.nakka-rocketry.net/th_grain.html
 	https://space.stackexchange.com/questions/4153/could-3d-printing-be-used-to-achieve-perfect-grain-geometry-of-solid-and-hybrid
 
+	https://en.wikipedia.org/wiki/Solid-propellant_rocket#Grain_geometry
+	Circular bore: if in BATES configuration, produces progressive-regressive thrust curve.
+End burner: propellant burns from one axial end to other producing steady long burn, though has thermal difficulties, center of gravity (CG) shift.
+C-slot: propellant with large wedge cut out of side (along axial direction), producing fairly long regressive thrust, though has thermal difficulties and asymmetric CG characteristics.
+Moon burner: off-center circular bore produces progressive-regressive long burn, though has slight asymmetric CG characteristics
+Finocyl: usually a 5- or 6-legged star-like shape that can produce very level thrust, with a bit quicker burn than circular bore due to increased surface area.
+
 
 Current Issues
 ==============
 
+Check drag cubes for all chutes
+Check costs of 1.875 and 2.5m parts, both entry and purchase
+Manufacturer not showing up
+Not all tech parts in tree

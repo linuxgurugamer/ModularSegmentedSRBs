@@ -1,0 +1,16 @@
+This will list known issues with the mod.  This document will most likely not be in the final release
+
+Issue:	Reverting to launch has a tendency to instead switch focus to the next vessel in flight, in my case, a 
+		discarded lander in orbit around Duna; this tends to happen more often than not following a crash or RUD, 
+		rather than simply resetting while in optimal flight or on the pad.
+Status: Unable to replicate, requested more information
+
+Issue:  When stack is broken, open end is spewing same thrust (?) as motor end
+		Motor continues to spew same thrust
+Status: Known, fix postponed until later
+
+Issue:	Parachutes don't work.
+			1) They don't generate any braking force when deployed; 
+			2) the fuel segment variants animation breaks
+		Motor-with-fuel-segment variants engine nozzles cannot be adjusted
+Status:	Waiting for new part models.  Possible solution would be to split parts into individual parts rather than using the PartVariants

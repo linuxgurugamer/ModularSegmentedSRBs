@@ -266,7 +266,10 @@ namespace ModularSegmentedSRBs
 
                 totalMaxThrust += moduleFuelSegment.GetSetMaxThrust;
                 totalSegmentHeight += moduleFuelSegment.segmentHeight;
-                invTotalSegmentHeight = 1 / totalSegmentHeight;
+                if (totalSegmentHeight > 0)
+                    invTotalSegmentHeight = 1 / totalSegmentHeight;
+                else
+                    invTotalSegmentHeight = 0;
 
                 //totalSolidFuel += moduleFuelSegment.MaxSolidFuel();
                 //segmentWidth = Math.Max(segmentWidth, moduleFuelSegment.segmentWidth);
@@ -451,6 +454,7 @@ namespace ModularSegmentedSRBs
         {
             if (this.EngineIgnited && !brokenSRB)
             {
+#if true // for testing
                 if (failureChance > 0)
                 {
                     if (!sickEngine && (UnityEngine.Random.Range(0f, 1f) <= failureChance || triggerEngineFailure))
@@ -481,14 +485,7 @@ namespace ModularSegmentedSRBs
                     segments[i].part.explode();
                 }
                 if (sickEngine)
-                    engineHealth = Math.Max(0.1f, engineHealth - UnityEngine.Random.Range(0, 0.01f));
-                PartResource secondPartResource = null;
-
-                totalFuelFlow = 0;
-
-                double totalCurrentFuel = 0;
-                double fuelFlow = 0;
-                double totalMaxFuel = 0;
+                    engineHealth = Math.Max(0.1f, engineHealth - UnityEngine.Random.Range(0, 0.01f)); 
 
                 if (engineHealth < oldEngineHealth) // || HighLogic.CurrentGame.Parameters.CustomParams<MSSRB_1>().hasThrustVariability)
                 {
@@ -504,58 +501,72 @@ namespace ModularSegmentedSRBs
                         ChangeUsage(engineHealth);
                     }
                 }
+#endif
 
+                PartResource secondPartResource = null;
+
+                totalFuelFlow = 0;
+
+                double totalCurrentFuel = 0;
+                double fuelFlow = 0;
+                double totalMaxFuel = 0;
                 var maxFuelFlow = getMaxFuelFlow(propellants[burnablePropIndx]) * Time.fixedDeltaTime - part.Resources[ModSegSRBs.BurnablePropellant].amount + 0.05f;
+
+
                 for (int i = 0; i < segments.Count; i++)
                 {
                     Segment segment = segments[i];
                     MS_SRB_Fuel_Segment moduleFuelSegment = segment.part.Modules["MS_SRB_Fuel_Segment"] as MS_SRB_Fuel_Segment;
 
-                    fuelFlow = segment.segmentHeight * invTotalSegmentHeight * maxFuelFlow;
-
-                    fuelFlow *= engineHealth;
-                    maxFuelFlow *= engineHealth;
-
-                    PartResourceList prl = segment.part.Resources;
-                    double availableResource = Math.Min(fuelFlow, prl[ModSegSRBs.Propellant].amount);
-                    prl[ModSegSRBs.Propellant].amount -= availableResource;
-                    totalFuelFlow += availableResource;
-                    totalCurrentFuel += prl[ModSegSRBs.Propellant].amount;
-                    totalMaxFuel += prl[ModSegSRBs.Propellant].maxAmount;
-
-                    if (((MS_SRB_SegmentEnds)segment.part.Modules["MS_SRB_SegmentEnds"]).EngineIgnited)
+                    if (segment.segmentHeight > 0)
                     {
-                        secondPartResource = segment.part.Resources[ModSegSRBs.BurnablePropellant];
+                        fuelFlow = segment.segmentHeight * invTotalSegmentHeight * maxFuelFlow;
+
+                        fuelFlow *= engineHealth;
+                        maxFuelFlow *= engineHealth;
+
+                        PartResourceList prl = segment.part.Resources;
+                        double availableResource = Math.Min(fuelFlow, prl[ModSegSRBs.Propellant].amount);
+                        prl[ModSegSRBs.Propellant].amount -= availableResource;
+                        totalFuelFlow += availableResource;
+                        totalCurrentFuel += prl[ModSegSRBs.Propellant].amount;
+                        totalMaxFuel += prl[ModSegSRBs.Propellant].maxAmount;
+
+                        if (((MS_SRB_SegmentEnds)segment.part.Modules["MS_SRB_SegmentEnds"]).EngineIgnited)
+                        {
+                            secondPartResource = segment.part.Resources[ModSegSRBs.BurnablePropellant];
+                        }
+                        else
+                            secondPartResource = null;
+                    }
+                }
+                return;
+                totalFuelFlow *= Time.timeScale;
+                if (totalFuelFlow > 0)
+                {
+                    if (secondPartResource != null)
+                    {
+                        double t = (secondPartResource.amount + totalFuelFlow + part.Resources[ModSegSRBs.BurnablePropellant].amount) / 2;
+                        secondPartResource.amount =
+                            part.Resources[ModSegSRBs.BurnablePropellant].amount = t;
+
                     }
                     else
-                        secondPartResource = null;
+                    {
+                        // Update resources in the engine, and then update
+                        // the maxAmount with the inverse of the percentage of fuel remaining
+                        // This fools the game into showing the correct amount in the staging toolbar
+                        part.Resources[ModSegSRBs.BurnablePropellant].amount += totalFuelFlow;
 
-                }
 
-                totalFuelFlow *= Time.timeScale;
-
-                if (secondPartResource != null)
-                {
-                    double t = (secondPartResource.amount + totalFuelFlow + part.Resources[ModSegSRBs.BurnablePropellant].amount) / 2;
-                    secondPartResource.amount =
-                        part.Resources[ModSegSRBs.BurnablePropellant].amount = t;
-
-                }
-                else
-                {
-                    // Update resources in the engine, and then update
-                    // the maxAmount with the inverse of the percentage of fuel remaining
+                    }
+                    // Now update the maxAmount with the inverse of the percentage of fuel remaining
                     // This fools the game into showing the correct amount in the staging toolbar
-                    part.Resources[ModSegSRBs.BurnablePropellant].amount += totalFuelFlow;
 
-
+                    part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
+                        part.Resources[ModSegSRBs.BurnablePropellant].amount * totalFuelMass / (part.Resources[ModSegSRBs.BurnablePropellant].amount + totalCurrentFuel);
+                    percentLeft = (float)(totalCurrentFuel / totalMaxFuel);
                 }
-                // Now update the maxAmount with the inverse of the percentage of fuel remaining
-                // This fools the game into showing the correct amount in the staging toolbar
-
-                part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
-                    part.Resources[ModSegSRBs.BurnablePropellant].amount * totalFuelMass / (part.Resources[ModSegSRBs.BurnablePropellant].amount + totalCurrentFuel);
-                percentLeft = (float)(totalCurrentFuel / totalMaxFuel);
             }
         }
 

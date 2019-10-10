@@ -1,2 +1,15 @@
 0.0.0
 	Initial development commit.  See README.md for details.
+
+0.0.0.1
+	First decent beta release
+
+0.0.0.2
+	Fixed missized Minutman and STS engines
+	Fixed duplicated crashTolerance in nosecones
+	Fixed typo in crashTolerance in segment_0625 and segment_125
+	Fixed following edge cases, caused by a divide by zero error:
+		Placing 2 SRMs on a stack - (SRM + segment + SRM (upside down)) when launched, causes the game to jump to an ethereal Otherspace dimension. (there a name for this? Void Kraken? SubSpace Kraken?)Empty starfield, map doesn't work. Game can be reverted to launch or VAB, subsequent launches result in all textures being see through. Log is spammed with 'look rotation viewing vector is zero', if that helps.
+		Placing a motor on a vessel without a fuel segment above it, if staged, also summons the SubSpace Kraken like above.
+	Added Known-Issues.txt file
+	Added new subdirectory called Ships, will contain sample ships.  Currently has Kerbal-X with SRBs
