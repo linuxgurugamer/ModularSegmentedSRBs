@@ -517,7 +517,7 @@ namespace ModularSegmentedSRBs
                 {
                     Segment segment = segments[i];
                     MS_SRB_Fuel_Segment moduleFuelSegment = segment.part.Modules["MS_SRB_Fuel_Segment"] as MS_SRB_Fuel_Segment;
-
+                    Log.Info("UpdateSegmentsInFlight, segmentheight: " + segment.segmentHeight);
                     if (segment.segmentHeight > 0)
                     {
                         fuelFlow = segment.segmentHeight * invTotalSegmentHeight * maxFuelFlow;
@@ -540,7 +540,7 @@ namespace ModularSegmentedSRBs
                             secondPartResource = null;
                     }
                 }
-                return;
+               
                 totalFuelFlow *= Time.timeScale;
                 if (totalFuelFlow > 0)
                 {

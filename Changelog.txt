@@ -13,3 +13,9 @@
 		Placing a motor on a vessel without a fuel segment above it, if staged, also summons the SubSpace Kraken like above.
 	Added Known-Issues.txt file
 	Added new subdirectory called Ships, will contain sample ships.  Currently has Kerbal-X with SRBs
+
+0.0.0.3
+	Updated part models and configs, thanks @SuicidalInsanity
+	Removed debug code which was preventing the engines from firing
+	Moved EndCaps to the Utility tab
+
