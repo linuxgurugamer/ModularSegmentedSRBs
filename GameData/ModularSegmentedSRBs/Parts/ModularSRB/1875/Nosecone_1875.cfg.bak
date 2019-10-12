@@ -11,7 +11,7 @@ PART
 	}
 
 	rescaleFactor = 1
-	node_stack_bottom = 0.0, -0.4388194, 0.0, 0.0, -1.0, 0.0, 2
+	node_stack_bottom = 0.0, -0.4388194, 0.0, 0.0, -1.0, 0.0, 1
 	node_attach = 0.9375, 0.0, 0.0, 1.0, 0.0, 0.0
 
 	fx_exhaustFlame_yellow_tiny = 0.0, -0.17, 0.163, 0.0, 1.0, 0.0, running
@@ -39,7 +39,7 @@ PART
 	emissiveConstant = 0.7
 	breakingForce = 50
 	breakingTorque = 50
-	crashTolerance = 6
+	crashTolerance = 7
 	bodyLiftMultiplier = 0
 	stageOffset = -1
 	explosionPotential = 1
@@ -61,24 +61,20 @@ PART
 		maxAmount = 15
 	}	
 
-	RESOURCE
-	{
-		name = BurnableSegmentedSolidFuel
-		amount = 0
-		maxAmount = 23
-	} 
+		/////////// Resources ///////////
+	// The actual amounts will be calculated by the mod at runtime by MS_SRB_Fuel_Segment
 	RESOURCE
 	{
 		name = SegmentedSolidFuel
-		amount = 0
+		amount = 468.6
 		maxAmount = 468.6
 	}
 
 	RESOURCE
 	{
-		name = AbortedSegmentedSolidFuel
+		name = BurnableSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.6
+		maxAmount = 23
 	} 
 
 	MODULE
@@ -108,7 +104,7 @@ PART
 			}
 			NODES
 			{
-				node_stack_bottom = 0.0, -0.43881945, 0.0, 0.0, -1.0, 0.0, 2
+				node_stack_bottom = 0.0, -0.43881945, 0.0, 0.0, -1.0, 0.0, 1
 			}
 		}
 		VARIANT
@@ -133,7 +129,7 @@ PART
 			}
 			NODES
 			{
-				node_stack_bottom = 0.0, -1.5, 0.0, 0.0, -1.0, 0.0, 2	
+				node_stack_bottom = 0.0, -1.5, 0.0, 0.0, -1.0, 0.0, 1				
 			}
 		}
 		
@@ -149,11 +145,11 @@ PART
 		semiDeployedAnimation = semiDeploy
 		fullyDeployedAnimation = fullDeploy
 		stowedDrag = 0.22
-		semiDeployedDrag = 30
+		semiDeployedDrag = 3
 		fullyDeployedDrag = 1500
 		minAirPressureToOpen = 0.04
 		clampMinAirPressure = 0.04
-		deployAltitude = 2000
+		deployAltitude = 1000
 		deploymentSpeed = 0.12
 		semiDeploymentSpeed = 0.5
 		chuteMaxTemp = 650
@@ -335,6 +331,7 @@ PART
 		exhaustDamageMultiplier = 50
 	}
 
+	
     MODULE
     {
         name = MS_SRB_Fuel_Segment
@@ -410,7 +407,7 @@ PART
 			PREFAB_PARTICLE
 			{
 				prefabName = fx_exhaustSparks_flameout_2
-				transformName = bottomNode
+				transformName = thrustTransform
 				oneShot = true
 			}
 			AUDIO
@@ -450,7 +447,7 @@ PART
 		
 		PROPELLANT
 		{
-			name = AbortedSegmentedSolidFuel
+			name = BurnableSegmentedSolidFuel
 			ratio = 1.0
 			DrawGauge = True
 		}

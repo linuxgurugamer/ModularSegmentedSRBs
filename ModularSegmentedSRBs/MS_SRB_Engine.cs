@@ -424,26 +424,28 @@ namespace ModularSegmentedSRBs
 
             GameEvents.onChangeEngineDVIncludeState.Fire(this);
         }
-#if false
-        internal void SetBrokenSRB(float percentage, double abortFuelAmt)
+
+#if true
+        internal void SetBrokenSRB(float thrust, float percentage, double abortFuelAmt)
         {
             Log.Info("SetBrokenSRB, abortFuelAmt: " + abortFuelAmt);
+            maxThrust = thrust;
             ChangeUsage(percentage, ref maxThrust, ref atmosphereCurve);
             brokenSRB = true;
 
-            part.Resources[ModSegSRBs.AbortedPropellant].maxAmount =
-                                  part.Resources[ModSegSRBs.AbortedPropellant].amount = abortFuelAmt;
-            part.Resources[ModSegSRBs.Propellant].amount = part.Resources[ModSegSRBs.BurnablePropellant].amount = 0;
-            part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
-                                  part.Resources[ModSegSRBs.BurnablePropellant].maxAmount = 0;
+           // part.Resources[ModSegSRBs.AbortedPropellant].maxAmount =
+           //                       part.Resources[ModSegSRBs.AbortedPropellant].amount = abortFuelAmt;
+            part.Resources[ModSegSRBs.Propellant].amount = part.Resources[ModSegSRBs.BurnablePropellant].amount = abortFuelAmt;
+            //part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
+            //                      part.Resources[ModSegSRBs.BurnablePropellant].maxAmount = 0;
 
             List<MS_SRB_SegmentEnds> smfLst = part.Modules.GetModules<MS_SRB_SegmentEnds>();
             foreach (var se in smfLst)
             {
                 // if (se.attachNode == null || se.attachNode == "")
                 {
-                    Log.Info("SetBrokenSRB, activating");
-                    se.ActivateEngine2(maxThrust, maxFuelFlow);
+                  //  Log.Info("SetBrokenSRB, activating");
+                  //  se.ActivateEngine2(maxThrust * percentage, maxFuelFlow);
                 }
 
             }
