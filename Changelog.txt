@@ -19,11 +19,9 @@
 	Removed debug code which was preventing the engines from firing
 	Moved EndCaps to the Utility tab
 
-0.0.0.4
+0.0.0.5
 	More part model updates
 	Fixed missing sepratrons in nosecone
-
-0.0.0.5
 	Fixed missing transform topNode in the MinuteMan motor (was preventing top thrust after damage)
 	Fixed configs for 1.875 & 2.5m nosecones
 	Fixed top node of MinuteMan motor

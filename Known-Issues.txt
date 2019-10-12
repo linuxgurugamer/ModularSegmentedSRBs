@@ -7,6 +7,4 @@ Status: Unable to replicate, requested more information
 
 Issue:  When stack is broken, open end is spewing same thrust (?) as motor end
 		Motor continues to spew same thrust
-Status: Known, fix postponed until later
-
-Issue:  Sepratrons may have an issue, needs more testing.  May be related to new models
+Status: Work in progress
