@@ -15,6 +15,9 @@ namespace ModularSegmentedSRBs
         internal static string normalAlert = "Siren_Noise";
         bool Paused = false;
         bool soundPlaying = false;
+        float startTime;
+        float endTime;
+        int cnt = 0;
 
         Log Log = new Log("ModularSegmentedSRBs.AlertCore");
 
@@ -33,6 +36,7 @@ namespace ModularSegmentedSRBs
             if (soundplayer.SoundPlaying())
                 soundplayer.StopSound();
         }
+
         void OnPause()
         {
             Paused = true;
@@ -54,8 +58,6 @@ namespace ModularSegmentedSRBs
             Paused = false;
         }
 
-        float startTime;
-        float endTime;
         public void ActivateAlarm(int len)
         {
             Paused = false;
@@ -63,16 +65,14 @@ namespace ModularSegmentedSRBs
             endTime = startTime + len;
             soundPlaying = true;
         }
+
         public void DeactivateAlarm()
         {
             OnPause();
         }
 
-
-        int cnt = 0;
         void FixedUpdate()
         {
-
             if (HighLogic.CurrentGame.Parameters.CustomParams<MSSRB_1>().alarm && cnt++ > 10)
             {
                 cnt = 0;

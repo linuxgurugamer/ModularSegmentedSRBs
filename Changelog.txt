@@ -28,3 +28,16 @@
 	First stab at fixing the thrust of open ends and motor ends, seems to be mostly working
 	Fixed all node sizes
 	Adjusted position of thrust effects for many motors
+
+0.0.0.6
+	Fixed issue when sometimes during a RUD, the top end of a SRB stack would spew thrust while the motor shut down
+	Replaced effects of open ends
+	Replaced all Destroy(this) with part.RemoveModule(this)
+	Reorganized all part configs to make them all have the same format
+	Merged the multiple EFFECTS stanzas in each file
+	Added flameout stanzas to the effects for the open ends
+	Added reasonable cost values
+	Made the additional items in nosecone optional
+	Fixed missing crashTolorance fields 
+	Added code for thrust variability, but disabled at present
+	Cleaned up a log of disabled code

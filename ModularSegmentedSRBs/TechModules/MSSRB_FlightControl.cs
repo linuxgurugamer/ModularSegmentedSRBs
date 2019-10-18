@@ -6,11 +6,9 @@ namespace ModularSegmentedSRBs.TechModules
 
     public class MSSRB_FlightControl : ModuleCommand
     {
-        const string TechName = "MSSRB.ModuleFlightControl";
         Log Log = new Log("ModularSegmentedSRBs.MSSRB_FlightControl");
-
-        static AvailablePart techPart;
-        static bool techPartResearched = false;
+        
+        bool techPartResearched = false;
 
         public override void OnStart(StartState state)
         {
@@ -20,29 +18,19 @@ namespace ModularSegmentedSRBs.TechModules
 
         public override void Start()
         {
-            if (PartLoader.DoesPartExist(TechName))
+            techPartResearched = ModSegSRBs.PartAvailable(ModSegSRBs.MFCTechName);
+            if (!techPartResearched)
             {
-                techPart = PartLoader.getPartInfoByName(TechName);
-                if (techPart == null)
+                if (HighLogic.LoadedScene != GameScenes.LOADING)
                 {
-                    Log.Error("Start, TechName NOT found: " + TechName);
-                    base.OnDestroy();
-                    Destroy(this);
-                }
-                techPartResearched = PartResearched(techPart);
-                if (!techPartResearched)
-                {
-                    if (HighLogic.LoadedScene != GameScenes.LOADING)
-                    {
-                        base.OnDestroy();
-                        Destroy(this);
-                    }
-                }
-                else
-                {
-                    Log.Info("researched");
+                    part.RemoveModule(this);
                 }
             }
+            else
+            {
+                Log.Info(ModSegSRBs.MFCTechName + " researched");
+            }
+
             base.Start();
         }
 
@@ -52,25 +40,6 @@ namespace ModularSegmentedSRBs.TechModules
             if ((techPartResearched || HighLogic.LoadedScene == GameScenes.LOADING) && node != null)
                 base.OnLoad(node);
         }
-
-#if false
-        public override void OnAwake()
-        {
-            Start();
-            if (techPartResearched || HighLogic.LoadedScene == GameScenes.LOADING)
-                base.OnAwake();
-        }
-#endif
-
-        public bool PartResearched(AvailablePart p)
-        {
-            if (p == null)
-            {
-                Log.Error("PartResearched, AvailablePart is null");
-            }
-            return ResearchAndDevelopment.PartTechAvailable(p) && ResearchAndDevelopment.PartModelPurchased(p);
-        }
-
 
         public override string GetInfo()
         {

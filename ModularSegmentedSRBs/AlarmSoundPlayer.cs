@@ -18,14 +18,17 @@ namespace ModularSegmentedSRBs
                 source.audio.clip = loadedClip;
             source.audio.Play();
         }
+
         public void SetVolume(float vol)
         {
             source.audio.volume = vol / 100;
         }
+
         public void StopSound()
         {
             source.audio.Stop();
         }
+
         public bool SoundPlaying() //Returns true if sound is playing, otherwise false
         {
             if (source != null && source.audio != null)
@@ -37,11 +40,13 @@ namespace ModularSegmentedSRBs
                 return false;
             }
         }
+
         public void LoadNewSound(string soundPath, int cnt)
         {
             altSoundCount = cnt;
             LoadNewSound(soundPath, true);
         }
+
         public void LoadNewSound(string soundPath, bool alternative = false)
         {
             if (alternative)
@@ -49,6 +54,7 @@ namespace ModularSegmentedSRBs
             else
                 loadedClip = GameDatabase.Instance.GetAudioClip(soundPath);
         }
+
         public void Initialize(string soundPath)
         {
             //Initializing stuff;
@@ -60,7 +66,5 @@ namespace ModularSegmentedSRBs
             source.audio.volume = 0.5f;
             source.audio.spatialBlend = 0;
         }
-
     }
-    
 }

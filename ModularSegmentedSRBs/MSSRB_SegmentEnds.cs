@@ -6,97 +6,84 @@ using KSP_Log;
 
 namespace ModularSegmentedSRBs
 {
-    class MS_SRB_SegmentEnds : ModuleEnginesFX
+    class MSSRB_SegmentEnds : ModuleEnginesFX
     {
-        internal MS_SRB_Engine baseEngine = null; // This is set in the MS_SRB_Engine module
+        public new MSSRB_Part part { get { return base.part as MSSRB_Part; } }
 
-#if true
+        internal MSSRB_Engine baseEngine = null; // This is set in the MSSRB_Engine module
+
         [KSPField]
         public string attachNode = null;
-
-#if false
-        [KSPEvent(guiActive = true, guiActiveEditor = false, guiName = "Test Manual Activate")]
-        public void DoActivate()
-        {
-
-            ScreenMessages.PostScreenMessage("Activate", 5);
-            ActivateEngine("Manual activate");
-            //ActivateEngine("DoActivate");
-            return;
-
-            enabled = true;
-
-            part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
-                                part.Resources[ModSegSRBs.BurnablePropellant].amount = part.Resources[ModSegSRBs.Propellant].amount + part.Resources[ModSegSRBs.BurnablePropellant].amount;
-            part.Resources[ModSegSRBs.Propellant].amount = 0;
-
-            base.Activate();
-        }
-#endif
 
         public override bool IsStageable() { return false; }
 
 
 
         AttachNode attNode;
-        MS_SRB_Fuel_Segment thisSegment;
-        MS_SRB_Fuel_Segment attachedSegment = null;
-        MS_SRB_Endcap attachedEndCap = null;
-        MS_SRB_Engine attachedMotor = null;
+        MSSRB_Fuel_Segment thisSegment;
+        MSSRB_Fuel_Segment attachedSegment = null;
+        MSSRB_Endcap attachedEndCap = null;
+        MSSRB_Engine attachedMotor = null;
 
-        Log Log = new Log("ModularSegmentedSRBs.MS_SRB_SegmentEnds");
+        bool activated = false;
+
+        double totalFuelMass = 0;
+        float totalMaxThrust = 0;
+
+        Log Log = new Log("ModularSegmentedSRBs.MSSRB_SegmentEnds");
 
         void Start()
         {
             nonThrustMotor = true;
-                attNode = this.part.FindAttachNode(attachNode);
+            attNode = this.part.FindAttachNode(attachNode);
+            activated = false;
 #if true
 
-                base.Events["Activate"].active = false;
-                base.Events["Activate"].guiActive = false;
+            base.Events["Activate"].active = false;
+            base.Events["Activate"].guiActive = false;
 
-                base.Events["Shutdown"].active = false;
-                base.Events["Shutdown"].guiActive = false;
+            base.Events["Shutdown"].active = false;
+            base.Events["Shutdown"].guiActive = false;
 
-                base.Fields["independentThrottle"].guiActive = false;
-                base.Fields["independentThrottle"].guiActiveEditor = false;
+            base.Fields["independentThrottle"].guiActive = false;
+            base.Fields["independentThrottle"].guiActiveEditor = false;
 
-                base.Fields["independentThrottlePercentage"].guiActive = false;
-                base.Fields["independentThrottlePercentage"].guiActiveEditor = false;
+            base.Fields["independentThrottlePercentage"].guiActive = false;
+            base.Fields["independentThrottlePercentage"].guiActiveEditor = false;
 
-                base.Fields["thrustPercentage"].guiActive = false;
-                base.Fields["thrustPercentage"].guiActiveEditor = false;
+            base.Fields["thrustPercentage"].guiActive = false;
+            base.Fields["thrustPercentage"].guiActiveEditor = false;
 
-                Actions["ToggleThrottle"].active = false;
-                Actions["ToggleThrottle"].activeEditor = false;
+            Actions["ToggleThrottle"].active = false;
+            Actions["ToggleThrottle"].activeEditor = false;
 
 
 
-                foreach (var e in Events)
-                    Log.Info("Event: " + e.name + ", guiName = " + e.GUIName);
-                foreach (var a in Actions)
-                    Log.Info("Action: " + a.name + ", guiName: " + a.guiName);
+            foreach (var e in Events)
+                Log.Info("Event: " + e.name + ", guiName = " + e.GUIName);
+            foreach (var a in Actions)
+                Log.Info("Action: " + a.name + ", guiName: " + a.guiName);
 #endif
             if (HighLogic.LoadedSceneIsFlight)
             {
 
                 PartModuleList pml = part.Modules;
-                if (pml.Contains<MS_SRB_Fuel_Segment>())
-                    thisSegment = pml.GetModule<MS_SRB_Fuel_Segment>();
+                if (pml.Contains<MSSRB_Fuel_Segment>())
+                    thisSegment = pml.GetModule<MSSRB_Fuel_Segment>();
 
                 if (attNode != null && attNode.attachedPart != null)
                 {
                     pml = attNode.attachedPart.Modules;
                     if (pml != null)
                     {
-                        if (pml.Contains<MS_SRB_Fuel_Segment>())
-                            attachedSegment = pml.GetModule<MS_SRB_Fuel_Segment>();
+                        if (pml.Contains<MSSRB_Fuel_Segment>())
+                            attachedSegment = pml.GetModule<MSSRB_Fuel_Segment>();
 
-                        if (pml.Contains<MS_SRB_Endcap>())
-                            attachedEndCap = pml.GetModule<MS_SRB_Endcap>();
+                        if (pml.Contains<MSSRB_Endcap>())
+                            attachedEndCap = pml.GetModule<MSSRB_Endcap>();
 
-                        if (pml.Contains<MS_SRB_Engine>())
-                            attachedMotor = pml.GetModule<MS_SRB_Engine>();
+                        if (pml.Contains<MSSRB_Engine>())
+                            attachedMotor = pml.GetModule<MSSRB_Engine>();
                     }
                 }
             }
@@ -121,34 +108,29 @@ namespace ModularSegmentedSRBs
         }
 #endif
 
-        double totalFuelMass;
-        float totalMaxThrust;
-        bool CheckPartResources(Part part)
+        bool CheckPartResources(MSSRB_Part part, bool max = true)
         {
             // Check the nextPart's resources and Modules
-            // Check for the correct propellant and that it has the MS_SRB_Fuel_Segment module
+            // Check for the correct propellant and that it has the MSSRB_Fuel_Segment module
             // If so, add it to the segments list and accumulate some values for the motor
             // then update the propellant value amount in the fuel segment
             PartResourceList prl = part.Resources;
             PartModuleList pml = part.Modules;
-            if (prl.Contains(ModSegSRBs.Propellant) && pml.Contains<MS_SRB_Fuel_Segment>())
+            if (prl.Contains(ModSegSRBs.Propellant) && pml.Contains<MSSRB_Fuel_Segment>())
             {
-                Log.Info("CheckPartResources, " + ModSegSRBs.Propellant + " found, " + " MS_SRB_Fuel_Segment found");
-                MS_SRB_Fuel_Segment moduleFuelSegment = pml["MS_SRB_Fuel_Segment"] as MS_SRB_Fuel_Segment;
+                Log.Info("CheckPartResources, " + ModSegSRBs.Propellant + " found, " + " MSSRB_Fuel_Segment found");
+                MSSRB_Fuel_Segment moduleFuelSegment = pml["MSSRB_Fuel_Segment"] as MSSRB_Fuel_Segment;
 
-              
-                totalFuelMass += moduleFuelSegment.MaxSolidFuel();  // prl[ModSegSRBs.Propellant].maxAmount;                
-                totalMaxThrust += moduleFuelSegment.GetSetMaxThrust;
+                if (max)
+                    totalFuelMass += moduleFuelSegment.MaxSolidFuel();  // prl[ModSegSRBs.Propellant].maxAmount;                
+                else
+                    totalFuelMass += prl[ModSegSRBs.Propellant].amount;
+                totalMaxThrust += moduleFuelSegment.GetMaxThrust();
 
 
-                //totalSolidFuel += moduleFuelSegment.MaxSolidFuel();
-                //segmentWidth = Math.Max(segmentWidth, moduleFuelSegment.segmentWidth);
+                prl[ModSegSRBs.Propellant].amount = moduleFuelSegment.MaxSolidFuel();
+                prl[ModSegSRBs.BurnablePropellant].amount = 0;
 
-   
-  
-                    prl[ModSegSRBs.Propellant].amount = moduleFuelSegment.MaxSolidFuel();
-                    prl[ModSegSRBs.BurnablePropellant].amount = 0;
-        
                 prl[ModSegSRBs.Propellant].maxAmount =
                     prl[ModSegSRBs.BurnablePropellant].maxAmount = moduleFuelSegment.MaxSolidFuel();
                 Log.Info("totalMaxThrust: " + totalMaxThrust + ", totalFuelMass: " + totalFuelMass);
@@ -164,9 +146,9 @@ namespace ModularSegmentedSRBs
             }
         }
 
-        double GetAllAvailableFuel()
+        double GetAllAvailableFuel(bool max = true)
         {
-            string node = "top", attachedPartNode = "bottom" ;
+            string node = "top", attachedPartNode = "bottom";
             AttachNode attachNode = this.part.FindAttachNode(node);
             if (attachNode == null || attachNode.attachedPart == null)
             {
@@ -177,9 +159,9 @@ namespace ModularSegmentedSRBs
 
             Part curPart = this.part;
             Part nextPart;
-             totalFuelMass = 0;
-             totalMaxThrust = 0;
-            CheckPartResources(this.part);
+            totalFuelMass = 0;
+            totalMaxThrust = 0;
+            CheckPartResources(this.part as MSSRB_Part, max);
             if (attachNode == null)
                 return totalFuelMass;
             while (attachNode.attachedPart != null)
@@ -193,7 +175,7 @@ namespace ModularSegmentedSRBs
                     Log.Info("nextPartBottomNode == null");
                     break;
                 }
-                if (!CheckPartResources(nextPart))
+                if (!CheckPartResources(nextPart as MSSRB_Part, max))
                 {
                     Log.Info("CheckPartResources returns false");
                     break;
@@ -207,33 +189,31 @@ namespace ModularSegmentedSRBs
             return totalFuelMass;
         }
 
-        bool activated = false;
         void ActivateEngine(string reason)
         {
             Log.Info("ActivateEngine");
             if (HighLogic.LoadedSceneIsFlight && !activated)
             {
-                if (part == null)
-                    Log.Info("ActivateEngine, part is null");
-                if (reason == null)
-                    Log.Info("ActivateEngine, reason is null");
                 Log.Info("ActivateEngine, part: " + part.partInfo.title + ", reason: " + reason + ", activated: " + activated);
-               double availAmt = 0;
+                double availAmt = 0;
                 int cnt = 0;
 
                 // Get total of all fuel in part
 
-                availAmt = GetAllAvailableFuel();
+                availAmt = GetAllAvailableFuel(false);
 
                 Log.Info("ActivateEngine: " + cnt++ + ", Part: " + part.partInfo.title + ", availAmt: " + availAmt + ", maxThrust: " + totalMaxThrust);
 
-                part.Resources[ModSegSRBs.Propellant].amount = part.Resources[ModSegSRBs.BurnablePropellant].amount = 0;
-                maxThrust = totalMaxThrust /2;
-                if (baseEngine != null)
+                part.Resources[ModSegSRBs.Propellant].amount =
+                    part.Resources[ModSegSRBs.BurnablePropellant].amount = 0;
+                maxThrust = totalMaxThrust / 2;
+                bool vesselContainsBaseEngine = baseEngine != null && this.vessel.Parts.Contains(baseEngine.part);
+                if (vesselContainsBaseEngine)
                 {
                     baseEngine.SetBrokenSRB(totalMaxThrust, 0.5f, availAmt / 2);
-                    part.Resources[ModSegSRBs.AbortedPropellant].maxAmount =
-                        part.Resources[ModSegSRBs.AbortedPropellant].amount = availAmt / 2;
+                    baseEngine.part.Resources[ModSegSRBs.BurnablePropellant].amount =
+                        part.Resources[ModSegSRBs.AbortedPropellant].maxAmount =
+                            part.Resources[ModSegSRBs.AbortedPropellant].amount = availAmt / 2;
                 }
                 else
                 {
@@ -244,34 +224,23 @@ namespace ModularSegmentedSRBs
                 Log.Info("ActivateEngine, availAmt: " + availAmt);
                 enabled = true;
                 activated = true;
-#if false
-                //if (baseEngine.part != this.part)
-                {
-                    //double half =
-                    part.Resources[ModSegSRBs.AbortedPropellant].maxAmount =
-                                   part.Resources[ModSegSRBs.AbortedPropellant].amount = availAmt;
 
-                    part.Resources[ModSegSRBs.BurnablePropellant].maxAmount =
-                                   part.Resources[ModSegSRBs.BurnablePropellant].amount = 0;
-                    //part.Resources[ModSegSRBs.Propellant].maxAmount;
+                MSSRB_Engine.ChangeUsage(0.5f, ref this.maxThrust, ref this.atmosphereCurve);
 
-                    part.Resources[ModSegSRBs.Propellant].amount = 0;
-                    //Log.Info("maxAmount: " + part.Resources[ModSegSRBs.BurnablePropellant].maxAmount);
-                    maxThrust = 75;
-                    maxFuelFlow = 0.01f;
-                }
-#endif
-                MS_SRB_Engine.ChangeUsage(0.5f, ref this.maxThrust, ref this.atmosphereCurve);
-                if (baseEngine != null)
+                Log.Info("ActivateEngine, before baseEngine");
+                if (vesselContainsBaseEngine)
                 {
-                    baseEngine.maxThrust = this.maxThrust/ 2;
+                    baseEngine.maxThrust = this.maxThrust / 2;
                     baseEngine.atmosphereCurve = this.atmosphereCurve;
                     this.maxFuelFlow = baseEngine.maxFuelFlow;
+                    Log.Info("ActivateEngine, baseEngine.isActiveAndEnabled: " + baseEngine.isActiveAndEnabled);
+                    Log.Info("ActivateEngine, baseEngine.part.Resources[ModSegSRBs.BurnablePropellant].amount: " + baseEngine.part.Resources[ModSegSRBs.BurnablePropellant].amount);
+                    Log.Info("ActivateEngine, part.Resources[ModSegSRBs.AbortedPropellant].amount: " + part.Resources[ModSegSRBs.AbortedPropellant].amount);
                 }
 
                 Log.Info("maxThrust: " + maxThrust + ", maxFuelFlow: " + maxFuelFlow);
                 base.Activate();
-                
+
             }
         }
 
@@ -287,14 +256,19 @@ namespace ModularSegmentedSRBs
         {
             // Makes sure that this isn't activated when the baseEngine is
             // Just leaves this as a do-nothing, otherwise the StageManager will activate this stage
-
-            //ScreenMessages.PostScreenMessage("Activate", 5);
-            //ActivateEngine("Manual activate");
         }
 
         new void FixedUpdate()
-        {
-            base.FixedUpdate();
+        {       
+            // The base.FixedUpdate can get an exception if this part is destroyed, so
+            // wrap it in a try/catch (I hate exceptions)
+            try
+            {
+                base.FixedUpdate();
+            } catch
+            {
+                return;
+            }
             if (HighLogic.LoadedSceneIsEditor || this.vessel.situation <= Vessel.Situations.PRELAUNCH)
                 return;
 
@@ -308,12 +282,11 @@ namespace ModularSegmentedSRBs
                     }
                     else
                     {
-                        if (attachedSegment != null && thisSegment.segmentWidth > attachedSegment.segmentWidth)
+                        if (attachedSegment != null && thisSegment.part.segmentWidth > attachedSegment.part.segmentWidth)
                             ActivateEngine("This part wider than attached part");
-
-                        if (attachedEndCap != null && thisSegment.segmentWidth > attachedEndCap.segmentWidth)
+                        if (attachedEndCap != null && thisSegment.part.segmentWidth > attachedEndCap.part.segmentWidth)
                             ActivateEngine("This part wider than attached part");
-                        if (attachedMotor != null && thisSegment.segmentWidth > attachedMotor.segmentWidth)
+                        if (attachedMotor != null && thisSegment.part.segmentWidth > attachedMotor.part.segmentWidth)
                             ActivateEngine("This part wider than attached engine");
                     }
                 }
@@ -324,6 +297,21 @@ namespace ModularSegmentedSRBs
                 }
             }
         }
-#endif
+
+        public new string GetModuleTitle()
+        {
+            return "";
+        }
+
+        public override string GetModuleDisplayName()
+        {
+            return "";
+        }
+
+
+        public override string GetInfo()
+        {
+            return "";
+        }
     }
 }

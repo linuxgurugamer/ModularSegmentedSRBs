@@ -2,7 +2,7 @@ ship = Kerbal X SRBs
 version = 1.7.3
 description = The Kerbal X is one of the most successful rockets that can be ordered from a catalog. Despite the original design having been meant for a plastic model, it's proved itself quite dependable as a full-sized craft.¨¨The X is capable of achieving orbit around Kerbin, and even features a very optimistic set of landing legs on its upper stage.
 type = VAB
-size = 5.70011997,20.2105141,6.23888159
+size = 5.63116169,20.2105141,6.1592474
 steamPublishedFileId = 0
 persistentId = 2708531065
 rot = 0,0,0,1
@@ -5049,7 +5049,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Segment.125_4293149114
+	link = MSSRB.Segment.125_4293979212
 	sym = radialDecoupler1-2_4293167878
 	sym = radialDecoupler1-2_4293167818
 	sym = radialDecoupler1-2_4293167758
@@ -5194,7 +5194,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Segment.125_4293146794
+	link = MSSRB.Segment.125_4293978238
 	sym = radialDecoupler1-2_4293167818
 	sym = radialDecoupler1-2_4293167758
 	sym = radialDecoupler1-2_4293167698
@@ -5339,7 +5339,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Segment.125_4293146648
+	link = MSSRB.Segment.125_4293978088
 	sym = radialDecoupler1-2_4293167758
 	sym = radialDecoupler1-2_4293167698
 	sym = radialDecoupler1-2_4293167638
@@ -5484,7 +5484,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Segment.125_4293146502
+	link = MSSRB.Segment.125_4293977938
 	sym = radialDecoupler1-2_4293167698
 	sym = radialDecoupler1-2_4293167638
 	sym = radialDecoupler1-2_4293940444
@@ -5629,7 +5629,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Segment.125_4293146356
+	link = MSSRB.Segment.125_4293977788
 	sym = radialDecoupler1-2_4293167638
 	sym = radialDecoupler1-2_4293940444
 	sym = radialDecoupler1-2_4293167878
@@ -5774,7 +5774,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Segment.125_4293146210
+	link = MSSRB.Segment.125_4293977638
 	sym = radialDecoupler1-2_4293940444
 	sym = radialDecoupler1-2_4293167878
 	sym = radialDecoupler1-2_4293167818
@@ -5895,15 +5895,15 @@ PART
 }
 PART
 {
-	part = MSSRB.Segment.125_4293149114
-	partName = Part
-	persistentId = 3344168121
-	pos = -1.76990032,9.78953457,-1.02185142
+	part = MSSRB.Segment.125_4293979212
+	partName = MSSRB_Part
+	persistentId = 831644276
+	pos = -1.73541713,9.69500923,-1.00194275
 	attPos = 0,0,0
-	attPos0 = -0.825339556,0.110521354,7.07805157E-08
-	rot = 1.54268172E-08,0.258819073,-5.75736436E-08,-0.965925872
+	attPos0 = -0.785521865,0.0159960184,-1.49011612E-08
+	rot = 1.92835152E-08,0.258819073,-7.1967051E-08,-0.965925872
 	attRot = 0,0,0,1
-	attRot0 = 8.88178314E-16,5.96046377E-08,3.45725653E-08,1
+	attRot0 = 5.32907009E-15,5.96046377E-08,4.94737193E-08,1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -5916,19 +5916,19 @@ PART
 	sepI = 3
 	attm = 1
 	sameVesselCollision = False
-	modCost = 620
-	modMass = 0.920400023
+	modCost = 545.699097
+	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Nosecone.125_4293122884
-	link = MSSRB.STSMotor.125_4293104506
-	sym = MSSRB.Segment.125_4293146794
-	sym = MSSRB.Segment.125_4293146648
-	sym = MSSRB.Segment.125_4293146502
-	sym = MSSRB.Segment.125_4293146356
-	sym = MSSRB.Segment.125_4293146210
+	link = MSSRB.STSMotor.125_4293924648
+	link = MSSRB.Nosecone.125_4294368352
+	sym = MSSRB.Segment.125_4293978238
+	sym = MSSRB.Segment.125_4293978088
+	sym = MSSRB.Segment.125_4293977938
+	sym = MSSRB.Segment.125_4293977788
+	sym = MSSRB.Segment.125_4293977638
 	srfN = srfAttach,radialDecoupler1-2_4293940444,base
-	attN = top,MSSRB.Nosecone.125_4293122884_0|2|0_0|1|0_0|2|0_0|1|0
-	attN = bottom,MSSRB.STSMotor.125_4293104506_0|-2|0_0|-1|0_0|-2|0_0|-1|0
+	attN = top,MSSRB.Nosecone.125_4294368352_0|2|0_0|1|0_0|2|0_0|1|0
+	attN = bottom,MSSRB.STSMotor.125_4293924648_0|-2|0_0|-1|0_0|-2|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -5957,10 +5957,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 4
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5979,7 +5977,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6048,7 +6046,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6133,48 +6131,48 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 0
+		amount = 654.49851943214401
 		maxAmount = 654.49851943214401
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = SegmentedSolidFuel
 		amount = 0
-		maxAmount = 654.49851943214401
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.Segment.125_4293146794
-	partName = Part
-	persistentId = 3663379706
-	pos = -1.76990056,9.78953457,1.02185333
+	part = MSSRB.Segment.125_4293978238
+	partName = MSSRB_Part
+	persistentId = 3780200780
+	pos = -1.73541737,9.69500923,1.00194442
 	attPos = 0,0,0
-	attPos0 = -0.825339556,0.110521354,5.96046448E-08
-	rot = -1.54268047E-08,-0.258819014,-5.75736401E-08,-0.965925872
+	attPos0 = -0.785521865,0.0159960184,3.7252903E-08
+	rot = -1.92835063E-08,-0.258819014,-7.1967051E-08,-0.965925872
 	attRot = 0,0,0,1
-	attRot0 = 4.44089157E-16,4.470348E-08,3.45725617E-08,1
+	attRot0 = 4.88498088E-15,4.470348E-08,4.94737158E-08,1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -6187,19 +6185,19 @@ PART
 	sepI = 3
 	attm = 1
 	sameVesselCollision = False
-	modCost = 620
-	modMass = 0.920400023
+	modCost = 545.699097
+	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Nosecone.125_4293125090
-	link = MSSRB.STSMotor.125_4293100562
-	sym = MSSRB.Segment.125_4293146648
-	sym = MSSRB.Segment.125_4293146502
-	sym = MSSRB.Segment.125_4293146356
-	sym = MSSRB.Segment.125_4293146210
-	sym = MSSRB.Segment.125_4293149114
+	link = MSSRB.STSMotor.125_4293927556
+	link = MSSRB.Nosecone.125_4294372850
+	sym = MSSRB.Segment.125_4293978088
+	sym = MSSRB.Segment.125_4293977938
+	sym = MSSRB.Segment.125_4293977788
+	sym = MSSRB.Segment.125_4293977638
+	sym = MSSRB.Segment.125_4293979212
 	srfN = srfAttach,radialDecoupler1-2_4293167878,base
-	attN = top,MSSRB.Nosecone.125_4293125090_0|2|0_0|1|0_0|2|0_0|1|0
-	attN = bottom,MSSRB.STSMotor.125_4293100562_0|-2|0_0|-1|0_0|-2|0_0|-1|0
+	attN = top,MSSRB.Nosecone.125_4294372850_0|2|0_0|1|0_0|2|0_0|1|0
+	attN = bottom,MSSRB.STSMotor.125_4293927556_0|-2|0_0|-1|0_0|-2|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -6228,10 +6226,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 4
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6250,7 +6246,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6311,7 +6307,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6388,48 +6384,48 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 0
+		amount = 654.49851943214401
 		maxAmount = 654.49851943214401
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = SegmentedSolidFuel
 		amount = 0
-		maxAmount = 654.49851943214401
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.Segment.125_4293146648
-	partName = Part
-	persistentId = 2676868618
-	pos = -2.2901699E-07,9.78953457,2.0437057
+	part = MSSRB.Segment.125_4293978088
+	partName = MSSRB_Part
+	persistentId = 765895346
+	pos = -2.88621635E-07,9.69500923,2.00388813
 	attPos = 0,0,0
-	attPos0 = -0.825339556,0.110521361,5.96046448E-08
-	rot = -4.21468371E-08,-0.707106829,-4.21468407E-08,-0.707106769
+	attPos0 = -0.785521984,0.0159960184,0
+	rot = -5.26835429E-08,-0.707106829,-5.26835393E-08,-0.707106769
 	attRot = 0,0,0,1
-	attRot0 = 2.66453526E-15,5.96046448E-08,3.45725688E-08,1
+	attRot0 = 2.66453526E-15,5.96046448E-08,4.94737264E-08,1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -6442,19 +6438,19 @@ PART
 	sepI = 3
 	attm = 1
 	sameVesselCollision = False
-	modCost = 620
-	modMass = 0.920400023
+	modCost = 545.699097
+	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Nosecone.125_4293123852
-	link = MSSRB.STSMotor.125_4293100370
-	sym = MSSRB.Segment.125_4293146502
-	sym = MSSRB.Segment.125_4293146356
-	sym = MSSRB.Segment.125_4293146210
-	sym = MSSRB.Segment.125_4293149114
-	sym = MSSRB.Segment.125_4293146794
+	link = MSSRB.STSMotor.125_4293925240
+	link = MSSRB.Nosecone.125_4294369080
+	sym = MSSRB.Segment.125_4293977938
+	sym = MSSRB.Segment.125_4293977788
+	sym = MSSRB.Segment.125_4293977638
+	sym = MSSRB.Segment.125_4293979212
+	sym = MSSRB.Segment.125_4293978238
 	srfN = srfAttach,radialDecoupler1-2_4293167818,base
-	attN = top,MSSRB.Nosecone.125_4293123852_0|2|0_0|1|0_0|2|0_0|1|0
-	attN = bottom,MSSRB.STSMotor.125_4293100370_0|-2|0_0|-1|0_0|-2|0_0|-1|0
+	attN = top,MSSRB.Nosecone.125_4294369080_0|2|0_0|1|0_0|2|0_0|1|0
+	attN = bottom,MSSRB.STSMotor.125_4293925240_0|-2|0_0|-1|0_0|-2|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -6483,10 +6479,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 4
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6505,7 +6499,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6566,7 +6560,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6643,48 +6637,48 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 0
+		amount = 654.49851943214401
 		maxAmount = 654.49851943214401
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = SegmentedSolidFuel
 		amount = 0
-		maxAmount = 654.49851943214401
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.Segment.125_4293146502
-	partName = Part
-	persistentId = 20994279
-	pos = 1.76990247,9.78953457,1.02185452
+	part = MSSRB.Segment.125_4293977938
+	partName = MSSRB_Part
+	persistentId = 873511336
+	pos = 1.73542166,9.69500923,1.00194705
 	attPos = 0,0,0
-	attPos0 = -0.825339973,0.110521354,1.19209183E-07
-	rot = -5.75736401E-08,-0.965925872,-1.54268154E-08,-0.258819044
+	attPos0 = -0.785522223,0.0159960184,5.96045915E-08
+	rot = -7.1967051E-08,-0.965925872,-1.92835135E-08,-0.258819044
 	attRot = 0,0,0,1
-	attRot0 = 0,5.96046377E-08,3.45725617E-08,1
+	attRot0 = 5.32907009E-15,5.96046377E-08,4.94737193E-08,1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -6697,19 +6691,19 @@ PART
 	sepI = 3
 	attm = 1
 	sameVesselCollision = False
-	modCost = 620
-	modMass = 0.920400023
+	modCost = 545.699097
+	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Nosecone.125_4293123610
-	link = MSSRB.STSMotor.125_4293100178
-	sym = MSSRB.Segment.125_4293146356
-	sym = MSSRB.Segment.125_4293146210
-	sym = MSSRB.Segment.125_4293149114
-	sym = MSSRB.Segment.125_4293146794
-	sym = MSSRB.Segment.125_4293146648
+	link = MSSRB.STSMotor.125_4293925092
+	link = MSSRB.Nosecone.125_4294368898
+	sym = MSSRB.Segment.125_4293977788
+	sym = MSSRB.Segment.125_4293977638
+	sym = MSSRB.Segment.125_4293979212
+	sym = MSSRB.Segment.125_4293978238
+	sym = MSSRB.Segment.125_4293978088
 	srfN = srfAttach,radialDecoupler1-2_4293167758,base
-	attN = top,MSSRB.Nosecone.125_4293123610_0|2|0_0|1|0_0|2|0_0|1|0
-	attN = bottom,MSSRB.STSMotor.125_4293100178_0|-2|0_0|-1|0_0|-2|0_0|-1|0
+	attN = top,MSSRB.Nosecone.125_4294368898_0|2|0_0|1|0_0|2|0_0|1|0
+	attN = bottom,MSSRB.STSMotor.125_4293925092_0|-2|0_0|-1|0_0|-2|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -6738,10 +6732,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 4
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6760,7 +6752,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6821,7 +6813,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -6898,48 +6890,48 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 0
+		amount = 654.49851943214401
 		maxAmount = 654.49851943214401
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = SegmentedSolidFuel
 		amount = 0
-		maxAmount = 654.49851943214401
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.Segment.125_4293146356
-	partName = Part
-	persistentId = 2889499546
-	pos = 1.76990104,9.78953457,-1.02185178
+	part = MSSRB.Segment.125_4293977788
+	partName = MSSRB_Part
+	persistentId = 325324926
+	pos = 1.73542023,9.69500923,-1.00194418
 	attPos = 0,0,0
-	attPos0 = -0.825339854,0.110521354,5.96046519E-08
-	rot = -5.75736259E-08,-0.965925872,1.54268012E-08,0.258819103
+	attPos0 = -0.785522223,0.0159960184,0
+	rot = -7.19670439E-08,-0.965925872,1.92835152E-08,0.258819103
 	attRot = 0,0,0,1
-	attRot0 = -4.44089157E-16,5.96046377E-08,3.45725617E-08,1
+	attRot0 = 7.54951572E-15,5.96046377E-08,4.94737193E-08,1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -6952,19 +6944,19 @@ PART
 	sepI = 3
 	attm = 1
 	sameVesselCollision = False
-	modCost = 620
-	modMass = 0.920400023
+	modCost = 545.699097
+	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Nosecone.125_4293123368
-	link = MSSRB.STSMotor.125_4293099986
-	sym = MSSRB.Segment.125_4293146210
-	sym = MSSRB.Segment.125_4293149114
-	sym = MSSRB.Segment.125_4293146794
-	sym = MSSRB.Segment.125_4293146648
-	sym = MSSRB.Segment.125_4293146502
+	link = MSSRB.STSMotor.125_4293924944
+	link = MSSRB.Nosecone.125_4294368716
+	sym = MSSRB.Segment.125_4293977638
+	sym = MSSRB.Segment.125_4293979212
+	sym = MSSRB.Segment.125_4293978238
+	sym = MSSRB.Segment.125_4293978088
+	sym = MSSRB.Segment.125_4293977938
 	srfN = srfAttach,radialDecoupler1-2_4293167698,base
-	attN = top,MSSRB.Nosecone.125_4293123368_0|2|0_0|1|0_0|2|0_0|1|0
-	attN = bottom,MSSRB.STSMotor.125_4293099986_0|-2|0_0|-1|0_0|-2|0_0|-1|0
+	attN = top,MSSRB.Nosecone.125_4294368716_0|2|0_0|1|0_0|2|0_0|1|0
+	attN = bottom,MSSRB.STSMotor.125_4293924944_0|-2|0_0|-1|0_0|-2|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -6993,10 +6985,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 4
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7015,7 +7005,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -7076,7 +7066,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -7153,48 +7143,48 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 0
+		amount = 654.49851943214401
 		maxAmount = 654.49851943214401
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = SegmentedSolidFuel
 		amount = 0
-		maxAmount = 654.49851943214401
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.Segment.125_4293146210
-	partName = Part
-	persistentId = 3318039496
-	pos = 2.43156649E-07,9.78953457,-2.04370379
+	part = MSSRB.Segment.125_4293977638
+	partName = MSSRB_Part
+	persistentId = 1892039927
+	pos = 3.02761293E-07,9.69500923,-2.00388622
 	attPos = 0,0,0
-	attPos0 = -0.825339556,0.110521361,5.96046448E-08
-	rot = -4.21468371E-08,-0.707106829,4.214683E-08,0.707106769
+	attPos0 = -0.785521984,0.0159960184,0
+	rot = -5.26835393E-08,-0.707106829,5.26835322E-08,0.707106769
 	attRot = 0,0,0,1
-	attRot0 = 2.66453505E-15,5.96046377E-08,3.45725653E-08,1
+	attRot0 = 6.21724809E-15,5.96046377E-08,4.94737158E-08,1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -7207,19 +7197,19 @@ PART
 	sepI = 3
 	attm = 1
 	sameVesselCollision = False
-	modCost = 620
-	modMass = 0.920400023
+	modCost = 545.699097
+	modMass = 0
 	modSize = 0,0,0
-	link = MSSRB.Nosecone.125_4293123126
-	link = MSSRB.STSMotor.125_4293099794
-	sym = MSSRB.Segment.125_4293149114
-	sym = MSSRB.Segment.125_4293146794
-	sym = MSSRB.Segment.125_4293146648
-	sym = MSSRB.Segment.125_4293146502
-	sym = MSSRB.Segment.125_4293146356
+	link = MSSRB.STSMotor.125_4293924796
+	link = MSSRB.Nosecone.125_4294368534
+	sym = MSSRB.Segment.125_4293979212
+	sym = MSSRB.Segment.125_4293978238
+	sym = MSSRB.Segment.125_4293978088
+	sym = MSSRB.Segment.125_4293977938
+	sym = MSSRB.Segment.125_4293977788
 	srfN = srfAttach,radialDecoupler1-2_4293167638,base
-	attN = top,MSSRB.Nosecone.125_4293123126_0|2|0_0|1|0_0|2|0_0|1|0
-	attN = bottom,MSSRB.STSMotor.125_4293099794_0|-2|0_0|-1|0_0|-2|0_0|-1|0
+	attN = top,MSSRB.Nosecone.125_4294368534_0|2|0_0|1|0_0|2|0_0|1|0
+	attN = bottom,MSSRB.STSMotor.125_4293924796_0|-2|0_0|-1|0_0|-2|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -7248,10 +7238,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 4
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7270,7 +7258,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -7331,7 +7319,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -7408,486 +7396,12 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 0
+		amount = 654.49851943214401
 		maxAmount = 654.49851943214401
 		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = SegmentedSolidFuel
-		amount = 0
-		maxAmount = 654.49851943214401
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = AbortedSegmentedSolidFuel
-		amount = 0
-		maxAmount = 58.600000000000001
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = MSSRB.Nosecone.125_4293125090
-	partName = Part
-	persistentId = 3782983717
-	pos = -1.7699008,12.0820808,1.02185357
-	attPos = 0,0,0
-	attPos0 = -1.21457344E-09,4.29254627,2.60770179E-08
-	rot = 0,0,4.4408921E-16,1
-	attRot = 0,0,0,1
-	attRot0 = 1.54268047E-08,0.258819014,5.75736401E-08,-0.965925872
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 3
-	resPri = 0
-	dstg = 7
-	sidx = 1
-	sqor = 3
-	sepI = 3
-	attm = 0
-	sameVesselCollision = False
-	modCost = 320
-	modMass = 0.375
-	modSize = 0,0,0
-	sym = MSSRB.Nosecone.125_4293123852
-	sym = MSSRB.Nosecone.125_4293123610
-	sym = MSSRB.Nosecone.125_4293123368
-	sym = MSSRB.Nosecone.125_4293123126
-	sym = MSSRB.Nosecone.125_4293122884
-	attN = bottom,MSSRB.Segment.125_4293146794_0|-0.292546302|0_0|-1|0_0|-0.292546302|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModuleParachute
-		isEnabled = True
-		deploymentDelay = 20
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 2000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			CutAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Fuel_Segment
-		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			TriggerSegmentFailureAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_SegmentEnds
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_FlightControl
-		isEnabled = True
-		hibernation = False
-		hibernateOnWarp = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			HibernateToggle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		xmitIncomplete = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StartTransmissionAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Nosecone
-		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DoJettison
-			{
-				actionGroup = Abort
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartInfo
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SeparatronFuel
-		amount = 8
-		maxAmount = 8
-		flowState = True
 		isTweakable = True
 		hideFlow = False
 		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 5
-		maxAmount = 5
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = BurnableSegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
 		flowMode = Both
 	}
 	RESOURCE
@@ -7896,2284 +7410,34 @@ PART
 		amount = 0
 		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.Nosecone.125_4293123852
-	partName = Part
-	persistentId = 268097778
-	pos = -2.29017004E-07,12.0820808,2.04370594
+	part = MSSRB.STSMotor.125_4293927556
+	partName = MSSRB_Part
+	persistentId = 1062476156
+	pos = -1.73541713,7.69500923,1.0019443
 	attPos = 0,0,0
-	attPos0 = 5.8390107E-08,4.29254627,-3.36058018E-14
-	rot = 5.32907052E-15,0.500000119,8.8817842E-15,0.866025388
+	attPos0 = -1.90809306E-08,-2,1.49011896E-08
+	rot = 6.66133815E-15,0,-1.33226763E-15,1
 	attRot = 0,0,0,1
-	attRot0 = 1.54268029E-08,0.258818954,5.75736436E-08,-0.965925932
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 3
-	resPri = 0
-	dstg = 7
-	sidx = 1
-	sqor = 3
-	sepI = 3
-	attm = 0
-	sameVesselCollision = False
-	modCost = 320
-	modMass = 0.375
-	modSize = 0,0,0
-	sym = MSSRB.Nosecone.125_4293123610
-	sym = MSSRB.Nosecone.125_4293123368
-	sym = MSSRB.Nosecone.125_4293123126
-	sym = MSSRB.Nosecone.125_4293122884
-	sym = MSSRB.Nosecone.125_4293125090
-	attN = bottom,MSSRB.Segment.125_4293146648_0|-0.292546302|0_0|-1|0_0|-0.292546302|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModuleParachute
-		isEnabled = True
-		deploymentDelay = 20
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 2000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			CutAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Fuel_Segment
-		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			TriggerSegmentFailureAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_SegmentEnds
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_FlightControl
-		isEnabled = True
-		hibernation = False
-		hibernateOnWarp = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			HibernateToggle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		xmitIncomplete = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StartTransmissionAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Nosecone
-		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DoJettison
-			{
-				actionGroup = Abort
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartInfo
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SeparatronFuel
-		amount = 8
-		maxAmount = 8
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 5
-		maxAmount = 5
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = BurnableSegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = SegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = AbortedSegmentedSolidFuel
-		amount = 0
-		maxAmount = 58.600000000000001
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = MSSRB.Nosecone.125_4293123610
-	partName = Part
-	persistentId = 677277532
-	pos = 1.76990438,12.0820808,1.02185583
-	attPos = 0,0,0
-	attPos0 = -3.58842584E-07,4.29254627,-5.96046732E-08
-	rot = 3.55271368E-15,0.866025507,8.8817842E-16,0.5
-	attRot = 0,0,0,1
-	attRot0 = 1.54268047E-08,0.258819044,5.75736365E-08,-0.965925872
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 3
-	resPri = 0
-	dstg = 7
-	sidx = 1
-	sqor = 3
-	sepI = 3
-	attm = 0
-	sameVesselCollision = False
-	modCost = 320
-	modMass = 0.375
-	modSize = 0,0,0
-	sym = MSSRB.Nosecone.125_4293123368
-	sym = MSSRB.Nosecone.125_4293123126
-	sym = MSSRB.Nosecone.125_4293122884
-	sym = MSSRB.Nosecone.125_4293125090
-	sym = MSSRB.Nosecone.125_4293123852
-	attN = bottom,MSSRB.Segment.125_4293146502_0|-0.292546302|0_0|-1|0_0|-0.292546302|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModuleParachute
-		isEnabled = True
-		deploymentDelay = 20
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 2000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			CutAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Fuel_Segment
-		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			TriggerSegmentFailureAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_SegmentEnds
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_FlightControl
-		isEnabled = True
-		hibernation = False
-		hibernateOnWarp = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			HibernateToggle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		xmitIncomplete = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StartTransmissionAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Nosecone
-		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DoJettison
-			{
-				actionGroup = Abort
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartInfo
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SeparatronFuel
-		amount = 8
-		maxAmount = 8
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 5
-		maxAmount = 5
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = BurnableSegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = SegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = AbortedSegmentedSolidFuel
-		amount = 0
-		maxAmount = 58.600000000000001
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = MSSRB.Nosecone.125_4293123368
-	partName = Part
-	persistentId = 3920760057
-	pos = 1.76990247,12.0820808,-1.02185261
-	attPos = 0,0,0
-	attPos0 = -1.20423749E-07,4.29254627,-2.82342407E-14
-	rot = -3.55271368E-15,1.00000012,4.4408921E-16,0
-	attRot = 0,0,0,1
-	attRot0 = 1.54268065E-08,0.258819014,5.75736401E-08,-0.965925872
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 3
-	resPri = 0
-	dstg = 7
-	sidx = 1
-	sqor = 3
-	sepI = 3
-	attm = 0
-	sameVesselCollision = False
-	modCost = 320
-	modMass = 0.375
-	modSize = 0,0,0
-	sym = MSSRB.Nosecone.125_4293123126
-	sym = MSSRB.Nosecone.125_4293122884
-	sym = MSSRB.Nosecone.125_4293125090
-	sym = MSSRB.Nosecone.125_4293123852
-	sym = MSSRB.Nosecone.125_4293123610
-	attN = bottom,MSSRB.Segment.125_4293146356_0|-0.292546302|0_0|-1|0_0|-0.292546302|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModuleParachute
-		isEnabled = True
-		deploymentDelay = 20
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 2000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			CutAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Fuel_Segment
-		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			TriggerSegmentFailureAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_SegmentEnds
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_FlightControl
-		isEnabled = True
-		hibernation = False
-		hibernateOnWarp = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			HibernateToggle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		xmitIncomplete = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StartTransmissionAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Nosecone
-		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DoJettison
-			{
-				actionGroup = Abort
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartInfo
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SeparatronFuel
-		amount = 8
-		maxAmount = 8
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 5
-		maxAmount = 5
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = BurnableSegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = SegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = AbortedSegmentedSolidFuel
-		amount = 0
-		maxAmount = 58.600000000000001
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = MSSRB.Nosecone.125_4293123126
-	partName = Part
-	persistentId = 3069264935
-	pos = 2.43156705E-07,12.0820808,-2.04370403
-	attPos = 0,0,0
-	attPos0 = 5.83900786E-08,4.29254627,-3.36057984E-14
-	rot = 0,0.866025448,3.99680289E-15,-0.500000119
-	attRot = 0,0,0,1
-	attRot0 = 1.54268047E-08,0.258818984,5.75736436E-08,-0.965925932
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 3
-	resPri = 0
-	dstg = 7
-	sidx = 1
-	sqor = 3
-	sepI = 3
-	attm = 0
-	sameVesselCollision = False
-	modCost = 320
-	modMass = 0.375
-	modSize = 0,0,0
-	sym = MSSRB.Nosecone.125_4293122884
-	sym = MSSRB.Nosecone.125_4293125090
-	sym = MSSRB.Nosecone.125_4293123852
-	sym = MSSRB.Nosecone.125_4293123610
-	sym = MSSRB.Nosecone.125_4293123368
-	attN = bottom,MSSRB.Segment.125_4293146210_0|-0.292546302|0_0|-1|0_0|-0.292546302|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModuleParachute
-		isEnabled = True
-		deploymentDelay = 20
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 2000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			CutAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Fuel_Segment
-		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			TriggerSegmentFailureAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_SegmentEnds
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_FlightControl
-		isEnabled = True
-		hibernation = False
-		hibernateOnWarp = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			HibernateToggle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		xmitIncomplete = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StartTransmissionAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Nosecone
-		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DoJettison
-			{
-				actionGroup = Abort
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartInfo
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SeparatronFuel
-		amount = 8
-		maxAmount = 8
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 5
-		maxAmount = 5
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = BurnableSegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = SegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = AbortedSegmentedSolidFuel
-		amount = 0
-		maxAmount = 58.600000000000001
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = MSSRB.Nosecone.125_4293122884
-	partName = Part
-	persistentId = 4123826571
-	pos = -1.76990056,12.0820808,-1.02185154
-	attPos = 0,0,0
-	attPos0 = -1.21454491E-09,4.29254627,2.98022975E-08
-	rot = 1.33226763E-15,-0.5,7.32747196E-15,0.866025507
-	attRot = 0,0,0,1
-	attRot0 = 1.54268012E-08,0.258818984,5.75736365E-08,-0.965925872
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 3
-	resPri = 0
-	dstg = 7
-	sidx = 1
-	sqor = 3
-	sepI = 3
-	attm = 0
-	sameVesselCollision = False
-	modCost = 320
-	modMass = 0.375
-	modSize = 0,0,0
-	sym = MSSRB.Nosecone.125_4293125090
-	sym = MSSRB.Nosecone.125_4293123852
-	sym = MSSRB.Nosecone.125_4293123610
-	sym = MSSRB.Nosecone.125_4293123368
-	sym = MSSRB.Nosecone.125_4293123126
-	attN = bottom,MSSRB.Segment.125_4293149114_0|-0.292546302|0_0|-1|0_0|-0.292546302|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModuleParachute
-		isEnabled = True
-		deploymentDelay = 20
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 2000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			CutAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_ModulePrecisionPropulsion
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Fuel_Segment
-		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			TriggerSegmentFailureAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_SegmentEnds
-		isEnabled = True
-		independentThrottle = False
-		independentThrottlePercentage = 0
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		includeinDVCalcs = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleThrottle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			independentThrottlePercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			thrustPercentage
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MSSRB_FlightControl
-		isEnabled = True
-		hibernation = False
-		hibernateOnWarp = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			MakeReferenceToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			HibernateToggle
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		xmitIncomplete = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StartTransmissionAction
-			{
-				actionGroup = None
-				active = False
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = MS_SRB_Nosecone
-		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DoJettison
-			{
-				actionGroup = Abort
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartInfo
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SeparatronFuel
-		amount = 8
-		maxAmount = 8
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 5
-		maxAmount = 5
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = BurnableSegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = SegmentedSolidFuel
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = AbortedSegmentedSolidFuel
-		amount = 0
-		maxAmount = 58.600000000000001
-		flowState = True
-		isTweakable = False
-		hideFlow = False
-		isVisible = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = MSSRB.STSMotor.125_4293104506
-	partName = Part
-	persistentId = 106676130
-	pos = -1.76990008,7.14857674,-1.02185142
-	attPos = 0,0,0
-	attPos0 = -8.24810513E-08,-4.64095783,2.60770499E-08
-	rot = 0,0,2.22044605E-16,1.00000012
-	attRot = 0,0,0,1
-	attRot0 = -1.54268172E-08,-0.258819073,5.75736436E-08,-0.965925872
+	attRot0 = 1.92835117E-08,0.258819014,7.1967051E-08,-0.965925872
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -10186,16 +7450,16 @@ PART
 	sepI = 3
 	attm = 0
 	sameVesselCollision = False
-	modCost = 500
-	modMass = 0.345075011
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = MSSRB.STSMotor.125_4293100562
-	sym = MSSRB.STSMotor.125_4293100370
-	sym = MSSRB.STSMotor.125_4293100178
-	sym = MSSRB.STSMotor.125_4293099986
-	sym = MSSRB.STSMotor.125_4293099794
-	attN = bottom,Null_0_0|-0.779630005|0_0|-1|0_0|-0.779630005|0_0|-1|0
-	attN = top,MSSRB.Segment.125_4293149114_0|0.640959978|0_0|1|0_0|0.640959978|0_0|1|0
+	sym = MSSRB.STSMotor.125_4293925240
+	sym = MSSRB.STSMotor.125_4293925092
+	sym = MSSRB.STSMotor.125_4293924944
+	sym = MSSRB.STSMotor.125_4293924796
+	sym = MSSRB.STSMotor.125_4293924648
+	attN = bottom,Null_0_0|-1.41689301|0_0|-1|0_0|-1.41689301|0_0|-1|0
+	attN = top,MSSRB.Segment.125_4293978238_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -10223,10 +7487,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10245,7 +7507,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -10314,10 +7576,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Engine
+		name = MSSRB_Engine
 		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -10543,12 +7803,12 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 654.49851943214401
-		maxAmount = 654.49851943214401
+		amount = 818.12314929017998
+		maxAmount = 818.12314929017998
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -10557,34 +7817,34 @@ PART
 		amount = 0
 		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.STSMotor.125_4293100562
-	partName = Part
-	persistentId = 3431877182
-	pos = -1.76990032,7.14857674,1.02185333
+	part = MSSRB.STSMotor.125_4293925240
+	partName = MSSRB_Part
+	persistentId = 3778954788
+	pos = -2.88621635E-07,7.69500923,2.00388789
 	attPos = 0,0,0
-	attPos0 = -8.248103E-08,-4.64095783,2.98023366E-08
-	rot = 4.4408921E-15,0.5,-1.66533454E-15,0.866025507
+	attPos0 = -7.86855878E-08,-2,1.30735351E-14
+	rot = 3.55271368E-15,0.500000119,7.99360578E-15,0.866025388
 	attRot = 0,0,0,1
-	attRot0 = -1.54268154E-08,-0.258819044,5.75736436E-08,-0.965925872
+	attRot0 = 1.92835046E-08,0.258818954,7.19670581E-08,-0.965925932
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -10597,16 +7857,16 @@ PART
 	sepI = 3
 	attm = 0
 	sameVesselCollision = False
-	modCost = 500
-	modMass = 0.345075011
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = MSSRB.STSMotor.125_4293100370
-	sym = MSSRB.STSMotor.125_4293100178
-	sym = MSSRB.STSMotor.125_4293099986
-	sym = MSSRB.STSMotor.125_4293099794
-	sym = MSSRB.STSMotor.125_4293104506
-	attN = bottom,Null_0_0|-0.779630005|0_0|-1|0_0|-0.779630005|0_0|-1|0
-	attN = top,MSSRB.Segment.125_4293146794_0|0.640959978|0_0|1|0_0|0.640959978|0_0|1|0
+	sym = MSSRB.STSMotor.125_4293925092
+	sym = MSSRB.STSMotor.125_4293924944
+	sym = MSSRB.STSMotor.125_4293924796
+	sym = MSSRB.STSMotor.125_4293924648
+	sym = MSSRB.STSMotor.125_4293927556
+	attN = bottom,Null_0_0|-1.41689301|0_0|-1|0_0|-1.41689301|0_0|-1|0
+	attN = top,MSSRB.Segment.125_4293978088_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -10634,10 +7894,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10656,7 +7914,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -10717,10 +7975,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Engine
+		name = MSSRB_Engine
 		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -10934,12 +8190,12 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 654.49851943214401
-		maxAmount = 654.49851943214401
+		amount = 818.12314929017998
+		maxAmount = 818.12314929017998
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -10948,34 +8204,34 @@ PART
 		amount = 0
 		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.STSMotor.125_4293100370
-	partName = Part
-	persistentId = 4283866001
-	pos = -2.29016976E-07,7.14857674,2.04370546
+	part = MSSRB.STSMotor.125_4293925092
+	partName = MSSRB_Part
+	persistentId = 3752605120
+	pos = 1.73542833,7.69500923,1.00194979
 	attPos = 0,0,0
-	attPos0 = -8.24810513E-08,-4.64095783,3.40265773E-14
-	rot = 1.0658141E-14,0.866025507,1.0658141E-14,0.5
+	attPos0 = -3.17104281E-07,-2,-4.69002651E-15
+	rot = 1.77635684E-15,0.866025507,4.4408921E-16,0.5
 	attRot = 0,0,0,1
-	attRot0 = -1.54268172E-08,-0.258819073,5.75736436E-08,-0.965925872
+	attRot0 = 1.92835135E-08,0.258819044,7.1967051E-08,-0.965925872
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -10988,16 +8244,16 @@ PART
 	sepI = 3
 	attm = 0
 	sameVesselCollision = False
-	modCost = 500
-	modMass = 0.345075011
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = MSSRB.STSMotor.125_4293100178
-	sym = MSSRB.STSMotor.125_4293099986
-	sym = MSSRB.STSMotor.125_4293099794
-	sym = MSSRB.STSMotor.125_4293104506
-	sym = MSSRB.STSMotor.125_4293100562
-	attN = bottom,Null_0_0|-0.779630005|0_0|-1|0_0|-0.779630005|0_0|-1|0
-	attN = top,MSSRB.Segment.125_4293146648_0|0.640959978|0_0|1|0_0|0.640959978|0_0|1|0
+	sym = MSSRB.STSMotor.125_4293924944
+	sym = MSSRB.STSMotor.125_4293924796
+	sym = MSSRB.STSMotor.125_4293924648
+	sym = MSSRB.STSMotor.125_4293927556
+	sym = MSSRB.STSMotor.125_4293925240
+	attN = bottom,Null_0_0|-1.41689301|0_0|-1|0_0|-1.41689301|0_0|-1|0
+	attN = top,MSSRB.Segment.125_4293977938_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -11025,10 +8281,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -11047,7 +8301,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -11108,10 +8362,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Engine
+		name = MSSRB_Engine
 		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -11325,12 +8577,12 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 654.49851943214401
-		maxAmount = 654.49851943214401
+		amount = 818.12314929017998
+		maxAmount = 818.12314929017998
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -11339,34 +8591,34 @@ PART
 		amount = 0
 		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.STSMotor.125_4293100178
-	partName = Part
-	persistentId = 1752668074
-	pos = 1.76990414,7.14857674,1.02185547
+	part = MSSRB.STSMotor.125_4293924944
+	partName = MSSRB_Part
+	persistentId = 3840984476
+	pos = 1.73542547,7.69500923,-1.00194728
 	attPos = 0,0,0
-	attPos0 = -4.99713735E-07,-4.64095783,1.19209183E-07
-	rot = -5.32907052E-15,1.00000012,3.99680289E-15,-2.98023224E-08
+	attPos0 = -3.17104025E-07,-2,-5.96045915E-08
+	rot = 1.77635684E-15,1.00000012,4.4408921E-16,0
 	attRot = 0,0,0,1
-	attRot0 = -1.54268172E-08,-0.258819073,5.75736436E-08,-0.965925872
+	attRot0 = 1.92835117E-08,0.258819014,7.1967051E-08,-0.965925872
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -11379,16 +8631,16 @@ PART
 	sepI = 3
 	attm = 0
 	sameVesselCollision = False
-	modCost = 500
-	modMass = 0.345075011
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = MSSRB.STSMotor.125_4293099986
-	sym = MSSRB.STSMotor.125_4293099794
-	sym = MSSRB.STSMotor.125_4293104506
-	sym = MSSRB.STSMotor.125_4293100562
-	sym = MSSRB.STSMotor.125_4293100370
-	attN = bottom,Null_0_0|-0.779630005|0_0|-1|0_0|-0.779630005|0_0|-1|0
-	attN = top,MSSRB.Segment.125_4293146502_0|0.640959978|0_0|1|0_0|0.640959978|0_0|1|0
+	sym = MSSRB.STSMotor.125_4293924796
+	sym = MSSRB.STSMotor.125_4293924648
+	sym = MSSRB.STSMotor.125_4293927556
+	sym = MSSRB.STSMotor.125_4293925240
+	sym = MSSRB.STSMotor.125_4293925092
+	attN = bottom,Null_0_0|-1.41689301|0_0|-1|0_0|-1.41689301|0_0|-1|0
+	attN = top,MSSRB.Segment.125_4293977788_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -11416,10 +8668,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -11438,7 +8688,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -11499,10 +8749,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Engine
+		name = MSSRB_Engine
 		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -11716,12 +8964,12 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 654.49851943214401
-		maxAmount = 654.49851943214401
+		amount = 818.12314929017998
+		maxAmount = 818.12314929017998
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -11730,34 +8978,34 @@ PART
 		amount = 0
 		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.STSMotor.125_4293099986
-	partName = Part
-	persistentId = 173301563
-	pos = 1.76990223,7.14857674,-1.02185237
+	part = MSSRB.STSMotor.125_4293924796
+	partName = MSSRB_Part
+	persistentId = 3484417988
+	pos = 3.02761293E-07,7.69500923,-2.00388598
 	attPos = 0,0,0
-	attPos0 = -2.6129473E-07,-4.64095783,-1.61436602E-14
-	rot = -8.8817842E-15,0.866025448,1.77635684E-15,-0.500000119
+	attPos0 = -7.86855452E-08,-2,2.72843847E-14
+	rot = 1.77635684E-15,0.866025329,3.55271368E-15,-0.5
 	attRot = 0,0,0,1
-	attRot0 = -1.54268189E-08,-0.258819103,5.75736436E-08,-0.965925813
+	attRot0 = 1.92835099E-08,0.258818984,7.1967051E-08,-0.965925932
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -11770,16 +9018,16 @@ PART
 	sepI = 3
 	attm = 0
 	sameVesselCollision = False
-	modCost = 500
-	modMass = 0.345075011
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = MSSRB.STSMotor.125_4293099794
-	sym = MSSRB.STSMotor.125_4293104506
-	sym = MSSRB.STSMotor.125_4293100562
-	sym = MSSRB.STSMotor.125_4293100370
-	sym = MSSRB.STSMotor.125_4293100178
-	attN = bottom,Null_0_0|-0.779630005|0_0|-1|0_0|-0.779630005|0_0|-1|0
-	attN = top,MSSRB.Segment.125_4293146356_0|0.640959978|0_0|1|0_0|0.640959978|0_0|1|0
+	sym = MSSRB.STSMotor.125_4293924648
+	sym = MSSRB.STSMotor.125_4293927556
+	sym = MSSRB.STSMotor.125_4293925240
+	sym = MSSRB.STSMotor.125_4293925092
+	sym = MSSRB.STSMotor.125_4293924944
+	attN = bottom,Null_0_0|-1.41689301|0_0|-1|0_0|-1.41689301|0_0|-1|0
+	attN = top,MSSRB.Segment.125_4293977638_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -11807,10 +9055,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -11829,7 +9075,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -11890,10 +9136,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Engine
+		name = MSSRB_Engine
 		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -12107,12 +9351,12 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 654.49851943214401
-		maxAmount = 654.49851943214401
+		amount = 818.12314929017998
+		maxAmount = 818.12314929017998
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -12121,34 +9365,34 @@ PART
 		amount = 0
 		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = MSSRB.STSMotor.125_4293099794
-	partName = Part
-	persistentId = 320342093
-	pos = 2.43156649E-07,7.14857674,-2.04370356
+	part = MSSRB.STSMotor.125_4293924648
+	partName = MSSRB_Part
+	persistentId = 4002869998
+	pos = -1.73541689,7.69500923,-1.00194252
 	attPos = 0,0,0
-	attPos0 = -8.24810229E-08,-4.64095783,3.40265739E-14
-	rot = 0,0.49999994,2.66453526E-15,-0.866025448
+	attPos0 = 4.05237017E-08,-2,-1.4901123E-08
+	rot = -2.66453526E-15,-0.5,1.99840144E-15,0.866025507
 	attRot = 0,0,0,1
-	attRot0 = -1.54268189E-08,-0.258819133,5.75736436E-08,-0.965925872
+	attRot0 = 1.92835099E-08,0.258818984,7.1967051E-08,-0.965925872
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -12161,16 +9405,16 @@ PART
 	sepI = 3
 	attm = 0
 	sameVesselCollision = False
-	modCost = 500
-	modMass = 0.345075011
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = MSSRB.STSMotor.125_4293104506
-	sym = MSSRB.STSMotor.125_4293100562
-	sym = MSSRB.STSMotor.125_4293100370
-	sym = MSSRB.STSMotor.125_4293100178
-	sym = MSSRB.STSMotor.125_4293099986
-	attN = bottom,Null_0_0|-0.779630005|0_0|-1|0_0|-0.779630005|0_0|-1|0
-	attN = top,MSSRB.Segment.125_4293146210_0|0.640959978|0_0|1|0_0|0.640959978|0_0|1|0
+	sym = MSSRB.STSMotor.125_4293927556
+	sym = MSSRB.STSMotor.125_4293925240
+	sym = MSSRB.STSMotor.125_4293925092
+	sym = MSSRB.STSMotor.125_4293924944
+	sym = MSSRB.STSMotor.125_4293924796
+	attN = bottom,Null_0_0|-1.41689301|0_0|-1|0_0|-1.41689301|0_0|-1|0
+	attN = top,MSSRB.Segment.125_4293979212_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -12198,10 +9442,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Fuel_Segment
+		name = MSSRB_Fuel_Segment
 		isEnabled = True
-		segmentHeight = 0
-		segmentWidth = 1.25
 		stagingEnabled = True
 		EVENTS
 		{
@@ -12220,7 +9462,7 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_SegmentEnds
+		name = MSSRB_SegmentEnds
 		isEnabled = True
 		independentThrottle = False
 		independentThrottlePercentage = 0
@@ -12281,10 +9523,8 @@ PART
 	}
 	MODULE
 	{
-		name = MS_SRB_Engine
+		name = MSSRB_Engine
 		isEnabled = True
-		segmentHeight = 1.25
-		segmentWidth = 1.25
 		independentThrottle = False
 		independentThrottlePercentage = 0
 		staged = False
@@ -12498,12 +9738,12 @@ PART
 	RESOURCE
 	{
 		name = BurnableSegmentedSolidFuel
-		amount = 654.49851943214401
-		maxAmount = 654.49851943214401
+		amount = 818.12314929017998
+		maxAmount = 818.12314929017998
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -12512,20 +9752,2744 @@ PART
 		amount = 0
 		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
 	{
 		name = AbortedSegmentedSolidFuel
 		amount = 0
-		maxAmount = 58.600000000000001
+		maxAmount = 0
 		flowState = True
-		isTweakable = False
+		isTweakable = True
 		hideFlow = False
-		isVisible = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MSSRB.Nosecone.125_4294372850
+	partName = MSSRB_Part
+	persistentId = 2197187211
+	pos = -1.73541784,12.6950092,1.00194454
+	attPos = 0,0,0
+	attPos0 = 1.07632275E-07,2.29254627,8.56816769E-08
+	rot = 0,0.258819014,-6.91234493E-15,0.965925872
+	attRot = -9.12486161E-17,0.258819014,-1.64189576E-15,0.965925872
+	attRot0 = 1.92835063E-08,0.258819014,7.1967051E-08,-0.965925872
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 7
+	sidx = 1
+	sqor = 3
+	sepI = 3
+	attm = 0
+	sameVesselCollision = False
+	modCost = 2200.1748
+	modMass = 0
+	modSize = 0,0,0
+	sym = MSSRB.Nosecone.125_4294369080
+	sym = MSSRB.Nosecone.125_4294368898
+	sym = MSSRB.Nosecone.125_4294368716
+	sym = MSSRB.Nosecone.125_4294368534
+	sym = MSSRB.Nosecone.125_4294368352
+	attN = bottom,MSSRB.Segment.125_4293978238_0|-1|0_0|-1|0_0|-1|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = Nosecone1m
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModuleParachute
+		isEnabled = True
+		deploymentDelay = 20
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 2000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			CutAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Fuel_Segment
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			TriggerSegmentFailureAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_SegmentEnds
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_FlightControl
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Nosecone
+		isEnabled = True
+		disableParachute = False
+		disableMFC = False
+		disablePP = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DoJettison
+			{
+				actionGroup = Abort
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePartInfo
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SeparatronFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = BurnableSegmentedSolidFuel
+		amount = 163.624629858036
+		maxAmount = 163.624629858036
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = SegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = AbortedSegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MSSRB.Nosecone.125_4294369080
+	partName = MSSRB_Part
+	persistentId = 4026889984
+	pos = -3.48226308E-07,12.6950092,2.00388837
+	attPos = 0,0,0
+	attPos0 = 1.07632331E-07,2.29254627,-3.36141027E-14
+	rot = -5.32907052E-15,0.707106888,6.71778019E-15,0.707106709
+	attRot = -9.12486161E-17,0.258819014,-1.64189576E-15,0.965925872
+	attRot0 = 1.92835046E-08,0.258818984,7.19670581E-08,-0.965925932
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 7
+	sidx = 1
+	sqor = 3
+	sepI = 3
+	attm = 0
+	sameVesselCollision = False
+	modCost = 2200.1748
+	modMass = 0
+	modSize = 0,0,0
+	sym = MSSRB.Nosecone.125_4294368898
+	sym = MSSRB.Nosecone.125_4294368716
+	sym = MSSRB.Nosecone.125_4294368534
+	sym = MSSRB.Nosecone.125_4294368352
+	sym = MSSRB.Nosecone.125_4294372850
+	attN = bottom,MSSRB.Segment.125_4293978088_0|-1|0_0|-1|0_0|-1|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = Nosecone1m
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModuleParachute
+		isEnabled = True
+		deploymentDelay = 20
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 2000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			CutAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Fuel_Segment
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			TriggerSegmentFailureAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_SegmentEnds
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_FlightControl
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Nosecone
+		isEnabled = True
+		disableParachute = False
+		disableMFC = False
+		disablePP = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DoJettison
+			{
+				actionGroup = Abort
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePartInfo
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SeparatronFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = BurnableSegmentedSolidFuel
+		amount = 163.624629858036
+		maxAmount = 163.624629858036
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = SegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = AbortedSegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MSSRB.Nosecone.125_4294368898
+	partName = MSSRB_Part
+	persistentId = 3223105702
+	pos = 1.73542714,12.6950092,1.00194991
+	attPos = 0,0,0
+	attPos0 = -2.49995679E-07,2.29254627,-6.77569098E-14
+	rot = -1.77635684E-15,0.965925872,-5.66424061E-15,0.258819044
+	attRot = -9.12486161E-17,0.258819014,-1.64189576E-15,0.965925872
+	attRot0 = 1.92835063E-08,0.258819044,7.19670439E-08,-0.965925872
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 7
+	sidx = 1
+	sqor = 3
+	sepI = 3
+	attm = 0
+	sameVesselCollision = False
+	modCost = 2200.1748
+	modMass = 0
+	modSize = 0,0,0
+	sym = MSSRB.Nosecone.125_4294368716
+	sym = MSSRB.Nosecone.125_4294368534
+	sym = MSSRB.Nosecone.125_4294368352
+	sym = MSSRB.Nosecone.125_4294372850
+	sym = MSSRB.Nosecone.125_4294369080
+	attN = bottom,MSSRB.Segment.125_4293977938_0|-1|0_0|-1|0_0|-1|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = Nosecone1m
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModuleParachute
+		isEnabled = True
+		deploymentDelay = 20
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 2000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			CutAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Fuel_Segment
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			TriggerSegmentFailureAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_SegmentEnds
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_FlightControl
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Nosecone
+		isEnabled = True
+		disableParachute = False
+		disableMFC = False
+		disablePP = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DoJettison
+			{
+				actionGroup = Abort
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePartInfo
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SeparatronFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = BurnableSegmentedSolidFuel
+		amount = 163.624629858036
+		maxAmount = 163.624629858036
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = SegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = AbortedSegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MSSRB.Nosecone.125_4294368716
+	partName = MSSRB_Part
+	persistentId = 1167055101
+	pos = 1.7354238,12.6950092,-1.00194645
+	attPos = 0,0,0
+	attPos0 = -1.30786262E-07,2.29254627,-5.96046519E-08
+	rot = -1.95399252E-14,0.965925872,1.27360192E-15,-0.258819133
+	attRot = -9.12486161E-17,0.258819014,-1.64189576E-15,0.965925872
+	attRot0 = 1.92835063E-08,0.258819014,7.1967051E-08,-0.965925872
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 7
+	sidx = 1
+	sqor = 3
+	sepI = 3
+	attm = 0
+	sameVesselCollision = False
+	modCost = 2200.1748
+	modMass = 0
+	modSize = 0,0,0
+	sym = MSSRB.Nosecone.125_4294368534
+	sym = MSSRB.Nosecone.125_4294368352
+	sym = MSSRB.Nosecone.125_4294372850
+	sym = MSSRB.Nosecone.125_4294369080
+	sym = MSSRB.Nosecone.125_4294368898
+	attN = bottom,MSSRB.Segment.125_4293977788_0|-1|0_0|-1|0_0|-1|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = Nosecone1m
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModuleParachute
+		isEnabled = True
+		deploymentDelay = 20
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 2000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			CutAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Fuel_Segment
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			TriggerSegmentFailureAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_SegmentEnds
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_FlightControl
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Nosecone
+		isEnabled = True
+		disableParachute = False
+		disableMFC = False
+		disablePP = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DoJettison
+			{
+				actionGroup = Abort
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePartInfo
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SeparatronFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = BurnableSegmentedSolidFuel
+		amount = 163.624629858036
+		maxAmount = 163.624629858036
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = SegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = AbortedSegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MSSRB.Nosecone.125_4294368534
+	partName = MSSRB_Part
+	persistentId = 1941289533
+	pos = 3.62366052E-07,12.6950092,-2.00388646
+	attPos = 0,0,0
+	attPos0 = 1.07632275E-07,2.29254627,-2.95417275E-14
+	rot = 1.77635684E-15,0.707106769,1.38232084E-14,-0.707106829
+	attRot = -9.12486161E-17,0.258819014,-1.64189576E-15,0.965925872
+	attRot0 = 1.92835028E-08,0.258818984,7.19670439E-08,-0.965925813
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 7
+	sidx = 1
+	sqor = 3
+	sepI = 3
+	attm = 0
+	sameVesselCollision = False
+	modCost = 2200.1748
+	modMass = 0
+	modSize = 0,0,0
+	sym = MSSRB.Nosecone.125_4294368352
+	sym = MSSRB.Nosecone.125_4294372850
+	sym = MSSRB.Nosecone.125_4294369080
+	sym = MSSRB.Nosecone.125_4294368898
+	sym = MSSRB.Nosecone.125_4294368716
+	attN = bottom,MSSRB.Segment.125_4293977638_0|-1|0_0|-1|0_0|-1|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = Nosecone1m
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModuleParachute
+		isEnabled = True
+		deploymentDelay = 20
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 2000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			CutAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Fuel_Segment
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			TriggerSegmentFailureAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_SegmentEnds
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_FlightControl
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Nosecone
+		isEnabled = True
+		disableParachute = False
+		disableMFC = False
+		disablePP = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DoJettison
+			{
+				actionGroup = Abort
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePartInfo
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SeparatronFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = BurnableSegmentedSolidFuel
+		amount = 163.624629858036
+		maxAmount = 163.624629858036
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = SegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = AbortedSegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MSSRB.Nosecone.125_4294368352
+	partName = MSSRB_Part
+	persistentId = 3267974653
+	pos = -1.73541737,12.6950092,-1.00194299
+	attPos = 0,0,0
+	attPos0 = 4.80276299E-08,2.29254627,-8.56817124E-08
+	rot = 6.66133815E-15,-0.258819044,-2.35560434E-15,0.965925872
+	attRot = -9.12486161E-17,0.258819014,-1.64189576E-15,0.965925872
+	attRot0 = -8.42889347E-15,-4.470348E-08,7.45057704E-08,-1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 7
+	sidx = 1
+	sqor = 3
+	sepI = 3
+	attm = 0
+	sameVesselCollision = False
+	modCost = 2200.1748
+	modMass = 0
+	modSize = 0,0,0
+	sym = MSSRB.Nosecone.125_4294372850
+	sym = MSSRB.Nosecone.125_4294369080
+	sym = MSSRB.Nosecone.125_4294368898
+	sym = MSSRB.Nosecone.125_4294368716
+	sym = MSSRB.Nosecone.125_4294368534
+	attN = bottom,MSSRB.Segment.125_4293979212_0|-1|0_0|-1|0_0|-1|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		selectedVariant = Nosecone1m
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModuleParachute
+		isEnabled = True
+		deploymentDelay = 20
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 2000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			CutAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_ModulePrecisionPropulsion
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Fuel_Segment
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			TriggerSegmentFailureAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_SegmentEnds
+		isEnabled = True
+		independentThrottle = False
+		independentThrottlePercentage = 0
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		includeinDVCalcs = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleThrottle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		AXISGROUPS
+		{
+			independentThrottlePercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			thrustPercentage
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_FlightControl
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MSSRB_Nosecone
+		isEnabled = True
+		disableParachute = False
+		disableMFC = False
+		disablePP = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DoJettison
+			{
+				actionGroup = Abort
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModulePartInfo
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SeparatronFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = BurnableSegmentedSolidFuel
+		amount = 163.624629858036
+		maxAmount = 163.624629858036
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = SegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = AbortedSegmentedSolidFuel
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }

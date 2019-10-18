@@ -29,8 +29,8 @@ namespace ModularSegmentedSRBs.TechModules
         {
             TechName =  TechNameTemplate.Replace("<TAG>", animationName.Replace("Offset",""));
             actionGUIName = "Enable/disable angled nozzle";
-            endEventGUIName = "Enable angled nozzle";
-            startEventGUIName = "Disable angled nozzle";
+            endEventGUIName = "Disable angled nozzle";
+            startEventGUIName = "Enable angled nozzle";
 
             if (PartLoader.DoesPartExist(TechName))
             {
@@ -41,8 +41,7 @@ namespace ModularSegmentedSRBs.TechModules
                     if (HighLogic.LoadedScene != GameScenes.LOADING)
                     {
                         Log.Info(TechName + ", not researched yet");
-                        
-                        Destroy(this);
+                        part.RemoveModule(this);
                     }
                 }
                 else
@@ -51,18 +50,21 @@ namespace ModularSegmentedSRBs.TechModules
                 }
             }
         }
+
         public override void OnLoad(ConfigNode node)
         {
             Start();
             if (techPartResearched || HighLogic.LoadedScene == GameScenes.LOADING)
                 base.OnLoad(node);
         }
+
         public override void OnAwake()
         {
             Start();
             if (techPartResearched || HighLogic.LoadedScene == GameScenes.LOADING)
                 base.OnAwake();
         }
+
         public bool PartResearched(AvailablePart p)
         {
             return ResearchAndDevelopment.PartTechAvailable(p) && ResearchAndDevelopment.PartModelPurchased(p);
@@ -74,6 +76,7 @@ namespace ModularSegmentedSRBs.TechModules
             string st = base.GetInfo();
             return st;
         }
+
         public override string GetModuleDisplayName()
         {
             string st = base.GetModuleDisplayName();

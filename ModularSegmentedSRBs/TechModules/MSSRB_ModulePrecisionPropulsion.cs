@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using KSP_Log;
+﻿using KSP_Log;
 
 namespace ModularSegmentedSRBs
 {
     class MSSRB_ModulePrecisionPropulsion : ModuleEnginesFX
     {
-        const string TechName = "MSSRB.PrecisionPropulsion";
         Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModulePrecisionPropulsion");
-
-        static AvailablePart techPart;
-        static bool techPartResearched = false;
+        
+        bool techPartResearched = false;
 
         public override void OnStart(StartState state)
         {
@@ -21,12 +15,12 @@ namespace ModularSegmentedSRBs
         }
 
         void Start()
-        {   
-            if (PartLoader.DoesPartExist(TechName))
+        {
+            Log.Info("Start");
+            if (HighLogic.LoadedSceneIsEditor || HighLogic.LoadedSceneIsFlight)
             {
-                Log.Info("Start, Part exists: " + TechName);
-                techPart = PartLoader.getPartInfoByName(TechName);
-                techPartResearched = PartResearched(techPart);
+                techPartResearched = ModSegSRBs.PartAvailable(ModSegSRBs.PPTechName);
+                Log.Info("Start, techPartResearched(" + ModSegSRBs.PPTechName + "): " + techPartResearched);
                 if (!techPartResearched)
                 {
                     // remove the fuel since it isn't being used
@@ -34,26 +28,24 @@ namespace ModularSegmentedSRBs
                     {
                         PartResourceList prl = this.part.Resources;
                         if (prl.Contains(ModSegSRBs.SeparatronFuel))
-                            //prl.Remove(ModSegSRBs.SeparatronFuel);
-                            prl[ModSegSRBs.SeparatronFuel].amount = prl[ModSegSRBs.SeparatronFuel].maxAmount = 0;
+                        {
+                            part.RemoveResource(ModSegSRBs.SeparatronFuel);
+                        }
                     }
                     if (HighLogic.LoadedScene != GameScenes.LOADING && HighLogic.LoadedScene != GameScenes.EDITOR)
                     {
-                        Log.Info(TechName + ", not researched yet");
-                        
-                        Destroy(this);
+                        Log.Info(ModSegSRBs.PPTechName + ", not researched yet");
+                        part.RemoveModule(this);
                     }
+
                 }
-            } else
-            {
-                Log.Error("TechName NOT found: " + TechName);
+                else
+                {
+                    Log.Info(ModSegSRBs.PPTechName + " researched");
+                }
             }
         }
 
-        public bool PartResearched(AvailablePart p)
-        {
-            return ResearchAndDevelopment.PartTechAvailable(p) && ResearchAndDevelopment.PartModelPurchased(p);
-        }
 
         public override void OnLoad(ConfigNode node)
         {
@@ -76,6 +68,7 @@ namespace ModularSegmentedSRBs
                 st = base.GetInfo();
             return st;
         }
+
         public override string GetModuleDisplayName()
         {
             string st = "";

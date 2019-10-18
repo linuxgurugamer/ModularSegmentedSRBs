@@ -20,14 +20,14 @@ namespace ModularSegmentedSRBs
         public override bool HasPresets { get { return true; } }
 
 
-#if false
+#if THRUSTVARIABILITY
         [GameParameters.CustomParameterUI("Thrust Variability",
             toolTip = "When enabled, there is a small but noticable pulsing to the thrust, increasing as time goes on")]
         public bool hasThrustVariability = true;
 
-        [GameParameters.CustomFloatParameterUI("Variability multiplier", displayFormat = "F3", minValue = 0.025f, maxValue = 0.2f,
-            toolTip = "Wait until G below this after timing out before triggering the Timeout Action")]
-        public float maxVariability = 0.05f;
+        [GameParameters.CustomFloatParameterUI("Variability multiplier", displayFormat = "F3", minValue = 0.025f, maxValue = 2f,
+            toolTip = "This is the max range of the variability of the thrust, in percent")]
+        public float maxVariability = 2f;
 #endif
 
         [GameParameters.CustomFloatParameterUI("Max safe Height:Width ratio", displayFormat = "F2", minValue = 6f, maxValue = 12f,
@@ -80,37 +80,42 @@ namespace ModularSegmentedSRBs
         [GameParameters.CustomParameterUI("Dev/test mode",
             toolTip = "Enables failure actions which can be used in Action Groups and PAW menu, useful for flight testing")]
         public bool devMode = false;
-
        
-
-
         public override void SetDifficultyPreset(GameParameters.Preset preset)
         {
             switch (preset)
             {
                 case GameParameters.Preset.Easy:
-                    //hasThrustVariability = false;
+#if THRUSTVARIABILITY
+                    hasThrustVariability = false;
+#endif
                     maxSafeWidthToLengthRatio = 12f;
                     warnOnExcessiveHeight = true;
                     break;
 
                 case GameParameters.Preset.Normal:
-                    //hasThrustVariability = true;
-                    //maxVariability = 0.05f;
+#if THRUSTVARIABILITY
+                    hasThrustVariability = true;
+                    maxVariability = 0.05f;
+#endif
                     maxSafeWidthToLengthRatio = 10f;
                     warnOnExcessiveHeight = true;
                     break;
 
                 case GameParameters.Preset.Moderate:
-                    //hasThrustVariability = true;
-                    //maxVariability = 0.1f;
+#if THRUSTVARIABILITY
+                    hasThrustVariability = true;
+                    maxVariability = 0.1f;
+#endif
                     maxSafeWidthToLengthRatio = 8f;
                     warnOnExcessiveHeight = true;
                     break;
 
                 case GameParameters.Preset.Hard:
-                    //hasThrustVariability = true;
-                    //maxVariability = 0.15f;
+#if THRUSTVARIABILITY
+                    hasThrustVariability = true;
+                    maxVariability = 0.15f;
+#endif
                     maxSafeWidthToLengthRatio = 7f;
                     warnOnExcessiveHeight = false;
                     break;
