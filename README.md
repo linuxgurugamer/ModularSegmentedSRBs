@@ -51,6 +51,7 @@ Segments (aka tanks).  There is one part for each of the 4 diameters available. 
 	1.25m			2m
 	1.875m			3m
 	2.5m			4m
+	3.75m			6m
 
 Motors.  There are three different motors in each size, ranging from the least capable to the most capable.  As with the nosecones, each motor has an optional fuel segment, available using the PartVariants
 	
@@ -159,7 +160,7 @@ Finocyl: usually a 5- or 6-legged star-like shape that can produce very level th
 Current Issues
 ==============
 
-Check drag cubes for all chutes
-Check costs of 1.875 and 2.5m parts, both entry and purchase
+Check drag cubes for all chutes - still needs to be done
+
 Manufacturer not showing up
 Not all tech parts in tree

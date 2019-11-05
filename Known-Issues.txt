@@ -5,6 +5,4 @@ Issue:	Reverting to launch has a tendency to instead switch focus to the next ve
 		rather than simply resetting while in optimal flight or on the pad.
 Status: Unable to replicate, requested more information
 
-Issue:  When stack is broken, open end is spewing same thrust (?) as motor end
-		Motor continues to spew same thrust
-Status: Work in progress
+

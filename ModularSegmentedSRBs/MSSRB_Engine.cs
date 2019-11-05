@@ -319,6 +319,11 @@ namespace ModularSegmentedSRBs
             ModSegSRBs.GetExtraInfo(variant, ref this.part.segmentHeight, ref this.part.segmentWidth);
             
             ScheduleSegmentUpdate("onEditorVariantApplied");
+#if true
+            MonoUtilities.RefreshContextWindows(part);
+#else
+            MonoUtilities.RefreshPartContextWindow(part);
+#endif
         }
 
         void onEditorShipModified(ShipConstruct construct) { ScheduleSegmentUpdate("onEditorShipModified"); }
@@ -496,7 +501,11 @@ namespace ModularSegmentedSRBs
 
             totalFuelFlow = maxFuelFlow / Planetarium.fetch.fixedDeltaTime;
 
-
+#if true
+            MonoUtilities.RefreshContextWindows(part);
+#else
+            MonoUtilities.RefreshPartContextWindow(part);
+#endif
             GameEvents.onChangeEngineDVIncludeState.Fire(this);
         }
         

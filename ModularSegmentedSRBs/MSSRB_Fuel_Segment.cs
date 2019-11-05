@@ -165,6 +165,11 @@ namespace ModularSegmentedSRBs
 
             if (baseEngine != null)
                 baseEngine.ScheduleSegmentUpdate("MSSRB_Fuel_Segment.onEditorVariantApplied");
+#if true
+            MonoUtilities.RefreshContextWindows(part);
+#else
+            MonoUtilities.RefreshPartContextWindow(part);
+#endif
         }
 
         private void FixedUpdate()

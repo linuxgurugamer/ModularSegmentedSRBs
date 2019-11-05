@@ -41,3 +41,8 @@
 	Fixed missing crashTolorance fields 
 	Added code for thrust variability, but disabled at present
 	Cleaned up a log of disabled code
+
+0.0.0.7
+	Added code to refresh PAW window.  Will need to be updated when compiled for 1.8 (3 locations)
+	Added 3.75m parts
+	Configured all costs for 1.875, 2.5 and 3.75m parts to be consistant
