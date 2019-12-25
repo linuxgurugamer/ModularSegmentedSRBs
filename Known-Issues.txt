@@ -6,3 +6,11 @@ Issue:	Reverting to launch has a tendency to instead switch focus to the next ve
 Status: Unable to replicate, requested more information
 
 
+Issue:	engineer report not updating properly, needs to be manually shut and open to refresh
+Status:	open
+
+Issue:	nosecones sepratrons effects always on
+Status:	open
+
+Issue:	Log spam, may be because of debug build
+Status:	open

@@ -1,0 +1,3 @@
+ A C grain consists of two or more cylindrical grain segments with the outer surface inhibited, but free to burn both on the segment ends and the cylindrical core. Such grains can be configured to achieve a desired thrust-time profile while maintaining an acceptable center of gravity
+
+This pattern starts out with maximum thrust and slowly decreases over the lifetime of the burn.  Ideal for providing lots of thrust initially when the mass of the rocket is greatest.

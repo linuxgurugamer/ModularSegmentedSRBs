@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{336CED87-B05B-48AB-9F32-7D7E9EB067AC}</ProjectGuid>
+    <ProjectGuid>{B1CEC1F2-446B-456C-B1AF-87DA6078317C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ModularSegmentedSRBs</RootNamespace>
@@ -64,12 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlarmSoundPlayer.cs" />
-    <Compile Include="AssemblyVersion.cs">
+    <Compile Include="AssemblyVersion-173.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AssemblyVersion.tt</DependentUpon>
+      <DependentUpon>AssemblyVersion-173.tt</DependentUpon>
     </Compile>
     <Compile Include="AudibleAlertCore.cs" />
+    <Compile Include="GrainSelection.cs" />
     <Compile Include="InstallChecker.cs" />
     <Compile Include="ModularSegmentedSRBs.cs" />
     <Compile Include="MSSRB_Part.cs" />
@@ -86,7 +87,7 @@
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AssemblyVersion.tt">
+    <Content Include="AssemblyVersion-173.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AssemblyVersion.cs</LastGenOutput>
     </Content>
@@ -96,11 +97,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>start /D D:\Users\jbb\github\ModularSegmentedSRBs /WAIT deploy.bat  $(TargetDir) $(TargetFileName)
+    <PostBuildEvent>start /D D:\Users\jbb\github\ModularSegmentedSRBs /WAIT deploy-173.bat  $(TargetDir) $(TargetFileName)
 
 if $(ConfigurationName) == Release (
 
-	start /D D:\Users\jbb\github\ModularSegmentedSRBs /WAIT buildRelease.bat $(TargetDir) $(TargetFileName)
+	start /D D:\Users\jbb\github\ModularSegmentedSRBs /WAIT buildRelease-173.bat $(TargetDir) $(TargetFileName)
 
 )</PostBuildEvent>
   </PropertyGroup>
@@ -111,6 +112,6 @@ set textTemplatingPath="%25ProgramFiles(x86)%25\Microsoft Visual Studio\2017\Com
 
 
 
-%25textTemplatingPath%25 "$(ProjectDir)AssemblyVersion.tt"</PreBuildEvent>
+%25textTemplatingPath%25 "$(ProjectDir)AssemblyVersion-173.tt"</PreBuildEvent>
   </PropertyGroup>
 </Project>

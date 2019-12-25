@@ -19,7 +19,7 @@ namespace ModularSegmentedSRBs
         public const string PPTechName = "MSSRB.PrecisionPropulsion";
 
         public const float ThrustPerMeter = 36f; // gets multiplied by the width and length, this is roughly equivilent to the Kickback thrust/meter
-        public const float BetterSRBsThrustPerMeter = 80f; // gets multiplied by the width and length, this is roughly equivilent to the Kickback thrust/meter
+        public const float BetterSRBsThrustPerMeter = 60; // gets multiplied by the width and length, this is roughly equivilent to the Kickback thrust/meter
         public const float MassPerMeter = 0.03183101f;// gets multipled by Pi * width
 
         // Fuel Per Cubic Meter

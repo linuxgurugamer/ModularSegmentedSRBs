@@ -9,7 +9,7 @@ namespace ModularSegmentedSRBs
     {
         static public AudibleAlertCore fetch;
 
-        internal AlarmSoundPlayer soundplayer = new AlarmSoundPlayer();
+        internal AlarmSoundPlayer soundplayer; // = new AlarmSoundPlayer();
 
         internal const string SOUND_DIR = "ModularSegmentedSRBs/Audio/";
         internal static string normalAlert = "Siren_Noise";
@@ -20,6 +20,11 @@ namespace ModularSegmentedSRBs
         int cnt = 0;
 
         Log Log = new Log("ModularSegmentedSRBs.AlertCore");
+
+        void Awake()
+        {
+            soundplayer = new AlarmSoundPlayer();
+        }
 
         void Start()
         {

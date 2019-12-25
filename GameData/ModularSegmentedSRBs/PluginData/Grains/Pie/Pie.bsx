@@ -1,0 +1,11 @@
+<Motor Name="" DiameterMM="0" Length="0" Delays="" HardwareWeight="0" MFGCode="" ThrustMethod="1" ThrustCoefGiven="1.2" UnitsLinear="1">
+  <Nozzle ThroatDia="10" ExitDia="0" AmbientPressure="14.7" NozzleEfficiency="85" />
+  <Grain Type="9" Length="80" Diameter="39" EndsInhibited="1" Propellant="Viper" CoreDiameter="6" PieSegmentCount="8">
+    <Propellant Name="Viper" Density="0.06" ISPStar="170" BallisticA="0.0174" BallisticN="0.4285" SpecificHeatRatio="1.2768" MolarMass="0" CombustionTemp="0">
+      <Notes>
+      </Notes>
+    </Propellant>
+  </Grain>
+  <MotorNotes>
+  </MotorNotes>
+</Motor>

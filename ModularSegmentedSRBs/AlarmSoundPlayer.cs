@@ -4,12 +4,16 @@ namespace ModularSegmentedSRBs
 {
     internal class AlarmSoundPlayer
     {
-        public GameObject dangeralertplayer = new GameObject("MSSRBsAlarmPlayer"); //Makes the GameObject
+        public GameObject dangeralertplayer; // = new GameObject("MSSRBsAlarmPlayer"); //Makes the GameObject
         public FXGroup source; //The source to be added to the object
         public AudioClip loadedClip;
         public AudioClip alternativeClip;
         public int altSoundCount;
 
+        public AlarmSoundPlayer()
+        {
+            dangeralertplayer = new GameObject("MSSRBsAlarmPlayer"); //Makes the GameObject
+        }
         public void PlaySound(bool alternative = false)
         {
             if (alternative)

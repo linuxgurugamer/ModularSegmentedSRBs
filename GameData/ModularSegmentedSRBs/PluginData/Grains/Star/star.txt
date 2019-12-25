@@ -1,0 +1,2 @@
+These grains have a series of points protruding inward, as shown in the sketch, such that as the points burn off, they keep the area roughly constant. In a first approximation one can see that the periphery of the "star" should be equal to the outer(circular) periphery of the grain, so
+that the burning area is equal at beginning and end. Detailed geometric constructions have been developed that keep the area very nearly constant throughout the burn.

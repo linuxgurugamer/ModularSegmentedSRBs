@@ -46,3 +46,9 @@
 	Added code to refresh PAW window.  Will need to be updated when compiled for 1.8 (3 locations)
 	Added 3.75m parts
 	Configured all costs for 1.875, 2.5 and 3.75m parts to be consistant
+
+0.0.1 for KSP 1.7.3 
+0.0.2 for KSP 1.8.x
+	Hid the ThrustLimiter and Independent Throttle fields on the engine
+	Enabled ThrustCurves by adding: 		useThrustCurve = True
+	Added code to hide Engineer's Report and reshow it if it is visible.  Needed to work around a KSP bug where the mass doesn't get updated properly

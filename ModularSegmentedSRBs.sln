@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularSegmentedSRBs", "ModularSegmentedSRBs\ModularSegmentedSRBs.csproj", "{336CED87-B05B-48AB-9F32-7D7E9EB067AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularSegmentedSRBs-180", "ModularSegmentedSRBs\ModularSegmentedSRBs-180.csproj", "{336CED87-B05B-48AB-9F32-7D7E9EB067AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8449DED-FA94-47BB-B9DB-7875144D0134}"
 	ProjectSection(SolutionItems) = preProject
+		buildRelease-173.bat = buildRelease-173.bat
 		buildRelease.bat = buildRelease.bat
 		Changelog.txt = Changelog.txt
+		deploy-173.bat = deploy-173.bat
 		deploy.bat = deploy.bat
+		jenkins-173.txt = jenkins-173.txt
 		jenkins.txt = jenkins.txt
 		Known-Issues.txt = Known-Issues.txt
 		LICENSE.md = LICENSE.md
+		ModularSegmentedSRBs-173.version = ModularSegmentedSRBs-173.version
 		ModularSegmentedSRBs.version = ModularSegmentedSRBs.version
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularSegmentedSRBs-173", "ModularSegmentedSRBs\ModularSegmentedSRBs-173.csproj", "{B1CEC1F2-446B-456C-B1AF-87DA6078317C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,10 @@ Global
 		{336CED87-B05B-48AB-9F32-7D7E9EB067AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{336CED87-B05B-48AB-9F32-7D7E9EB067AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{336CED87-B05B-48AB-9F32-7D7E9EB067AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1CEC1F2-446B-456C-B1AF-87DA6078317C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1CEC1F2-446B-456C-B1AF-87DA6078317C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1CEC1F2-446B-456C-B1AF-87DA6078317C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1CEC1F2-446B-456C-B1AF-87DA6078317C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

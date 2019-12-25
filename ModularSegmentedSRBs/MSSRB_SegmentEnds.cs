@@ -175,10 +175,13 @@ namespace ModularSegmentedSRBs
                     Log.Info("nextPartBottomNode == null");
                     break;
                 }
-                if (!CheckPartResources(nextPart as MSSRB_Part, max))
+                if (nextPart.partName == "MSSRB_Part")
                 {
-                    Log.Info("CheckPartResources returns false");
-                    break;
+                    if (!CheckPartResources(nextPart as MSSRB_Part, max))
+                    {
+                        Log.Info("CheckPartResources returns false");
+                        break;
+                    }
                 }
                 curPart = nextPart;
                 attachNode = nextPart.FindAttachNode(node);

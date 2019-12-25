@@ -164,7 +164,7 @@ namespace ModularSegmentedSRBs
             var f = GetMaxThrust();
 
             if (baseEngine != null)
-                baseEngine.ScheduleSegmentUpdate("MSSRB_Fuel_Segment.onEditorVariantApplied");
+                baseEngine.ScheduleSegmentUpdate("MSSRB_Fuel_Segment.onEditorVariantApplied", 5);
 #if true
             MonoUtilities.RefreshContextWindows(part);
 #else
