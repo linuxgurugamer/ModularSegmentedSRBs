@@ -7,7 +7,7 @@ Status: Unable to replicate, requested more information
 
 
 Issue:	engineer report not updating properly, needs to be manually shut and open to refresh
-Status:	open
+Status:	fixed
 
 Issue:	nosecones sepratrons effects always on
 Status:	open
