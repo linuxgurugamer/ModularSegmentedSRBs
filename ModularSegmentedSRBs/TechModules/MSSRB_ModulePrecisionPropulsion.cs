@@ -4,7 +4,7 @@ namespace ModularSegmentedSRBs
 {
     class MSSRB_ModulePrecisionPropulsion : ModuleEnginesFX
     {
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModulePrecisionPropulsion");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModulePrecisionPropulsion");
         
         bool techPartResearched = false;
 

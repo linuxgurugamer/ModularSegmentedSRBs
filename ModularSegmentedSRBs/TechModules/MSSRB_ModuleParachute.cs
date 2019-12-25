@@ -6,7 +6,7 @@ namespace ModularSegmentedSRBs
 
     public class MSSRB_ModuleParachute : ModuleParachute
     {
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModuleParachute");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModuleParachute");
         
         bool techPartResearched = false;
 

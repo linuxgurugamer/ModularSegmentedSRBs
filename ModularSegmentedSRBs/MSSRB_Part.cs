@@ -15,7 +15,7 @@ namespace ModularSegmentedSRBs
 
         internal MSSRB_Part partInstantiatedFlag = null;
 
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_Part");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.MSSRB_Part");
 
         public new void Awake()
         {

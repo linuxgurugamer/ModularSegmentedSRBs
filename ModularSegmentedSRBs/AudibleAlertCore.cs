@@ -19,7 +19,7 @@ namespace ModularSegmentedSRBs
         float endTime;
         int cnt = 0;
 
-        Log Log = new Log("ModularSegmentedSRBs.AlertCore");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.AlertCore");
 
         void Awake()
         {

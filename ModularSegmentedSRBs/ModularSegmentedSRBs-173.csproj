@@ -39,15 +39,15 @@
     <Reference Include="ClickThroughBlocker">
       <HintPath>R:\KSP_1.7.3_dev\GameData\000_ClickThroughBlocker\Plugins\ClickThroughBlocker.dll</HintPath>
     </Reference>
-    <Reference Include="KSP_ColorPicker, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KSP_ColorPicker, Version=0.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>R:\KSP_1.7.3_dev\GameData\SpaceTuxLibrary\Plugins\KSP_ColorPicker.dll</HintPath>
     </Reference>
-    <Reference Include="KSP_Log, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KSP_Log, Version=0.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>R:\KSP_1.7.3_dev\GameData\SpaceTuxLibrary\Plugins\KSP_Log.dll</HintPath>
     </Reference>
-    <Reference Include="KSP_PartHighlighter, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KSP_PartHighlighter, Version=0.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>R:\KSP_1.7.3_dev\GameData\SpaceTuxLibrary\Plugins\KSP_PartHighlighter.dll</HintPath>
     </Reference>

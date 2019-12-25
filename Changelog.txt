@@ -52,3 +52,8 @@
 	Hid the ThrustLimiter and Independent Throttle fields on the engine
 	Enabled ThrustCurves by adding: 		useThrustCurve = True
 	Added code to hide Engineer's Report and reshow it if it is visible.  Needed to work around a KSP bug where the mass doesn't get updated properly
+
+0.0.1.1
+0.0.2.1
+	Fixed local build references
+	Removed version file from GameData directory

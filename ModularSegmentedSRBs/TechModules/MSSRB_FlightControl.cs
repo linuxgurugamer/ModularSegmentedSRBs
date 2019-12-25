@@ -6,7 +6,7 @@ namespace ModularSegmentedSRBs.TechModules
 
     public class MSSRB_FlightControl : ModuleCommand
     {
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_FlightControl");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.MSSRB_FlightControl");
         
         bool techPartResearched = false;
 

@@ -30,7 +30,7 @@ namespace ModularSegmentedSRBs
         double totalFuelMass = 0;
         float totalMaxThrust = 0;
 
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_SegmentEnds");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.MSSRB_SegmentEnds");
 
         void Start()
         {

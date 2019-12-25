@@ -11,7 +11,7 @@ namespace ModularSegmentedSRBs.TechModules
     {
         const string TechNameTemplate = "MSSRB.<TAG>AngledNozzle";
         string TechName = "";
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModuleParachute");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.MSSRB_ModuleParachute");
 
         static AvailablePart techPart;
         static bool techPartResearched = false;

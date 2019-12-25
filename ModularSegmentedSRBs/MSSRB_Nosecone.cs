@@ -8,7 +8,7 @@ namespace ModularSegmentedSRBs
 {
     class MSSRB_Nosecone : PartModule, IPartCostModifier
     {
-        Log Log = new Log("ModularSegmentedSRBs.MSSRB_Nosecone");
+        KSP_Log.Log Log = new Log("ModularSegmentedSRBs.MSSRB_Nosecone");
 
         public new MSSRB_Part part
         { get { return base.part as MSSRB_Part; } }
