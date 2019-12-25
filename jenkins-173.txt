@@ -29,13 +29,13 @@
 0:1.7.3
 
 # 1:GAMEDIR, VERSIONFILE [, GITHUBREPO ]
-1:ModularSegmentedSRBs, ModularSegmentedSRBs.version
+1:ModularSegmentedSRBs, ModularSegmentedSRBs-173.version, ModularSegmentedSRBs
 
 # 2:PROJNAME, PROJFILE, VERSIONFILE, PLUGINSFOLDER
-2:ModularSegmentedSRBs,ModularSegmentedSRBs/ModularSegmentedSRBs-173.csproj,ModularSegmentedSRBs.version,GameData/ModularSegmentedSRBs/Plugins
+2:ModularSegmentedSRBs,ModularSegmentedSRBs/ModularSegmentedSRBs-173.csproj,ModularSegmentedSRBs-173.version,GameData/ModularSegmentedSRBs/Plugins
 
 # 3:SOURCEFILE, DESTDIR
-3:ModularSegmentedSRBs.version,GameData/ModularSegmentedSRBs
+3:ModularSegmentedSRBs-173.version,GameData/ModularSegmentedSRBs
 3:LICENSE.md,GameData/ModularSegmentedSRBs
 3:README.md,GameData/ModularSegmentedSRBs
 
