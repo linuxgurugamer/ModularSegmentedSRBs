@@ -31,7 +31,7 @@
 1:ModularSegmentedSRBs, ModularSegmentedSRBs.version
 
 # 2:PROJNAME, PROJFILE, VERSIONFILE, PLUGINSFOLDER
-2:ModularSegmentedSRBs,ModularSegmentedSRBs/ModularSegmentedSRBs.csproj,ModularSegmentedSRBs.version,GameData/ModularSegmentedSRBs/Plugins
+2:ModularSegmentedSRBs,ModularSegmentedSRBs/ModularSegmentedSRBs-173.csproj,ModularSegmentedSRBs.version,GameData/ModularSegmentedSRBs/Plugins
 
 # 3:SOURCEFILE, DESTDIR
 3:ModularSegmentedSRBs.version,GameData/ModularSegmentedSRBs
