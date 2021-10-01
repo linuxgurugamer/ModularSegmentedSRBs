@@ -57,3 +57,7 @@
 0.0.2.1
 	Fixed local build references
 	Removed version file from GameData directory
+
+0.0.2.2
+	Added AssemblyFileVersion
+	Updated version file for 1.12
